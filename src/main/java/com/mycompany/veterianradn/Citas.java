@@ -11,18 +11,18 @@ public class Citas {
     private Doctor doctor;
 
     //int IDPaciente;
-    private Paciente paciente ;
+    private Dueños dueño ;
     
     //int ID_Mascota;
     private Mascota mascota ; 
 
-    public Citas(int ID_Cita, String Fecha, int hora, boolean Estado, Doctor doctor, Paciente paciente, Mascota mascota) {
+    public Citas(int ID_Cita, String Fecha, int hora, boolean Estado, Doctor doctor, Dueños cliente, Mascota mascota) {
         this.ID_Cita = ID_Cita;
         this.Fecha = Fecha;
         this.hora = hora;
         this.Estado = Estado;
         this.doctor = doctor;
-        this.paciente = paciente;
+        this.dueño = cliente;
         this.mascota = mascota;
     }
 
@@ -66,12 +66,12 @@ public class Citas {
         this.doctor = doctor;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public Dueños getPaciente() {
+        return dueño;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPaciente(Dueños paciente) {
+        this.dueño = paciente;
     }
 
     public Mascota getMascota() {
@@ -82,11 +82,22 @@ public class Citas {
         this.mascota = mascota;
     }
     
-    
+   
 
-  
-    
-    
-    
-    
-}
+    /*@Override
+    public String toString() {
+        return "Citas{" + "ID_Cita=" + ID_Cita + ", Fecha=" + Fecha + ", hora=" + hora + ", Estado=" + Estado + "," + doctor + ", paciente=" + paciente + ", mascota=" + mascota + '}';
+    }
+     */
+    public String toString() {
+        return "Cita #" + ID_Cita + " - Fecha: " + Fecha + ", Hora: " + hora + 
+               ", Doctor: " + doctor.getNombre() + 
+               ", Dueño: " + dueño.getNombre() + 
+                ", Mascota: " + mascota.getNombre() + 
+               " de la especie  " + mascota.getEspecie();
+    }
+ 
+ 
+ 
+ 
+    }

@@ -4,30 +4,34 @@ package com.mycompany.veterianradn;
 import java.util.ArrayList;
 
  
-public class Paciente {
+public class Dueños {
     
-    private int IDPaciente ;
+    private int IDDueño ;
      private String nombre;
      private String dirrecion ;
      private int telf ; 
-     private ArrayList<Mascota> mascota;
+     private ArrayList<Mascota> mascotas;
 
-    public Paciente(int IDPaciente, String nombre, String dirrecion, int telf, Mascota mascota) {
-        this.IDPaciente = IDPaciente;
+    public Dueños(int IdDueño, String nombre, String dirrecion, int telf   ) {
+        this.IDDueño = IdDueño;
         this.nombre = nombre;
         this.dirrecion = dirrecion;
         this.telf = telf;
-        this.mascota = new ArrayList<>(); 
+        this.mascotas = new ArrayList<>(); 
     }
 
      
-
+public void AgregarMascota(Mascota mascota) 
+        {
+            mascotas.add(mascota); 
+        }
+    
     public int getIDPaciente() {
-        return IDPaciente;
+        return IDDueño;
     }
 
     public void setIDPaciente(int IDPaciente) {
-        this.IDPaciente = IDPaciente;
+        this.IDDueño = IDPaciente;
     }
 
     public String getNombre() {
@@ -55,11 +59,16 @@ public class Paciente {
     }
 
     public ArrayList<Mascota> getMascotas() {
-        return mascota; 
+        return mascotas; 
     }
 
     public void setMascota(ArrayList<Mascota> mascota) {
-        this.mascota = mascota;
+        this.mascotas = mascota;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "IDPaciente=" + IDDueño + ", nombre=" + nombre + ", dirrecion=" + dirrecion + ", telf=" + telf + ", mascotas=" + mascotas + '}';
     }
 
    

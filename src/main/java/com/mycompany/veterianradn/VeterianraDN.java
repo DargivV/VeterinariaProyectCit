@@ -7,7 +7,7 @@ public class VeterianraDN {
         String [] HorarioDoc1 =  {"Lunes ","Miercoes ","jeuves ","Viernes"};
         
         Doctor doctor1 = new Doctor(01,"Ramirez","Gatos",HorarioDoc1,"5 pm ");
-       Cliente cliente1 = new Cliente (1,"roberto","Los nutriales", 94944);
+       Dueños cliente1 = new Dueños (1,"roberto","Los nutriales", 94944);
         Mascota mascota1 = new Mascota (1,"pimpon","Nutria", "Negra ",213,"12",cliente1 ) ;
                 
         Mascota mascota2 = new Mascota (2,"Almorset","Cuy", "Mostasa ",213,"12",cliente1 ) ;
@@ -15,8 +15,8 @@ public class VeterianraDN {
          Citas cita1 = new Citas (1,"4/7/7",6,true ,doctor1,cliente1 ,mascota1);
          
          mascota1.AgregarCita(cita1);
-         System.out.print("- ");
          mascota1.mostrarCitas();
+         //asasas
 //acabas de unir el arrary con la creacion del obj doctor 
         
         //ahora crear el paciente y la mascota 

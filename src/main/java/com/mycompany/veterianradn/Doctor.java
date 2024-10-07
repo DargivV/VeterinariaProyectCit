@@ -56,5 +56,10 @@ public class Doctor {
     public void setHora(String Hora) {
         this.Hora = Hora;
     }
+
+    @Override
+    public String toString() {
+        return "Doctor " +  Nombre + ", Especialidad: " + Especialidad + '}';
+    }
     
 }

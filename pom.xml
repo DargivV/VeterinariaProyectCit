@@ -11,5 +11,5 @@
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>com.mycompany.veterianradn.VeterianraDN</exec.mainClass>
     </properties>
-    <name>SprintUnoVeterianria</name>
+    <name>SprintVeterianria</name>
 </project>
