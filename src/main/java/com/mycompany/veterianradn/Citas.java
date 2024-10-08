@@ -94,6 +94,7 @@ public class Citas {
                ", Doctor: " + doctor.getNombre() + 
                ", Dueño: " + dueño.getNombre() + 
                 ", Mascota: " + mascota.getNombre() + 
+                ", Color " + mascota.getRaza() + 
                " de la especie  " + mascota.getEspecie();
     }
  

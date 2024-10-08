@@ -20,8 +20,7 @@ public class VeterianraDN {
 //acabas de unir el arrary con la creacion del obj doctor 
         
         //ahora crear el paciente y la mascota 
-        // Crear un paciente
-      //proceso , cambie muchas cosas toy llendo a comer couch , depues lo soluciono 
+        // Crear un paciente 
                 
                 }
 }
