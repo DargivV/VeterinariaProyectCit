@@ -1,5 +1,5 @@
  
-package Modelo;
+package Modelo.Clases;
 
  
 public class tipo_enfermedad {

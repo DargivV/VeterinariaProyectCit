@@ -1,5 +1,5 @@
  
-package Modelo;
+package Modelo.Clases;
  
 public class motivo_cita {
     private int id_motivo_cita ;

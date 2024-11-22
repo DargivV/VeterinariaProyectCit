@@ -1,4 +1,4 @@
-package Modelo;
+package Modelo.Clases;
 
 public class CamposdeTablaMedico {
     private int IDMedico;

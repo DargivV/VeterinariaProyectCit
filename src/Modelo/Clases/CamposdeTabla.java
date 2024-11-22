@@ -1,4 +1,4 @@
-package Modelo;
+package Modelo.Clases;
 
 public class CamposdeTabla {
     private int idAyudante;

@@ -3,9 +3,9 @@ package Controlador;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 //Modelos de las tablas
-import Modelo.CamposdeTabla; 
-import Modelo.CamposdeTablaMedico;
-import Modelo.TablaDueno;
+import Modelo.Clases.CamposdeTabla;
+import Modelo.Clases.CamposdeTablaMedico;
+import Modelo.Clases.TablaDueno;
 //formularios 
 import Vista.Forma01;
 import Vista.FormCrear;

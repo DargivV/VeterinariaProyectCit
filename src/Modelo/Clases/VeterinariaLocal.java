@@ -1,13 +1,13 @@
 
-package Modelo;
+package Modelo.Clases;
 
-public class localveterinaria { 
+public class VeterinariaLocal { 
     private int id_local;
     private String nombre;
     private int id_direccion;
 
  
-    public localveterinaria(int id_local, String nombre, int id_direccion) {//si o si debe de tener una dirrecion ya creaada 
+    public VeterinariaLocal(int id_local, String nombre, int id_direccion) {//si o si debe de tener una dirrecion ya creaada 
         this.id_local = id_local;
         this.nombre = nombre;
         this.id_direccion = id_direccion;
