@@ -1,38 +1,38 @@
 package Modelo;
 
 public class CamposdeTabla {
-    private int idarea;
-    private String nomarea;
-    private String lugar;
+    private int idAyudante;
+    private String nombre;
+    private String IDDoctor;
 
     public CamposdeTabla() {}
 
     public Object[] Registro(int num) {
-        Object[] fila = {num, idarea, nomarea, lugar};
+        Object[] fila = {num, idAyudante, nombre, IDDoctor};
         return fila;
     }
 
     public int getIdarea() {
-        return idarea;
+        return idAyudante;
     }
 
     public void setIdarea(int idarea) {
-        this.idarea = idarea;
+        this.idAyudante = idarea;
     }
 
     public String getNomarea() {
-        return nomarea;
+        return nombre;
     }
 
     public void setNomarea(String nomarea) {
-        this.nomarea = nomarea;
+        this.nombre = nomarea;
     }
 
     public String getLugar() {
-        return lugar;
+        return IDDoctor;
     }
 
     public void setLugar(String lugar) {
-        this.lugar = lugar;
+        this.IDDoctor = lugar;
     }
 }
