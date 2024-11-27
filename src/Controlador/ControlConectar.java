@@ -7,8 +7,8 @@ import Modelo.Clases.CamposdeTabla;
 import Modelo.Clases.CamposdeTablaMedico;
 import Modelo.Clases.TablaDueno;
 //formularios 
-import Vista.Forma01;
-import Vista.FormCrear;
+import Vista.EstadisticasR;
+import Vista.GestionarMAscDueño;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //import java.awt.geom.Area;
@@ -22,21 +22,21 @@ public class ControlConectar implements ActionListener {
     String[] tituloMedic = { "ID Medico", "nombre", "Id del local ","Apellidos M","Apellido P","telefono"};
     String[] tituloDue = { "ID Medico", "nombre", "Id del local ","Apellidos M","Apellido P","Correo","telefono"};
    
-    Forma01 vista;
-    FormCrear vistaC;//llamar a lformu crear 
+    EstadisticasR vista;
+    GestionarMAscDueño vistaC;//llamar a lformu crear 
 
     
     
     //esta vaian se repitira segun los form que creen 
     //si se extiende mucho se tendra que crear una clase para solo esto creo.. o le hacemos algo para que no se vea feo 
-    public ControlConectar(Forma01 fl) {
+    public ControlConectar(EstadisticasR fl) {
         vista = fl;
         MostrarDatosAyudantes();
         MostrarDatosMedico();
         //MostrarDatosDuen();
     }
     
-     public ControlConectar(FormCrear fl) {
+     public ControlConectar(GestionarMAscDueño fl) {
         vistaC = fl;
        // MostrarDatosAyudantes();
         MostrarDatosMedico();

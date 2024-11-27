@@ -10,12 +10,12 @@ import java.text.SimpleDateFormat;
  *
  * @author golde
  */
-public class FormCrear extends javax.swing.JFrame {
+public class GestionarMAscDueño extends javax.swing.JFrame {
 
     /**
      * Creates new form Crear
      */
-    public FormCrear() {
+    public GestionarMAscDueño() {
         initComponents();
     }
 
@@ -63,12 +63,13 @@ public class FormCrear extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jCalendar1.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         jCalendar1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jCalendar1PropertyChange(evt);
             }
         });
-        getContentPane().add(jCalendar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 139, 246, 173));
+        getContentPane().add(jCalendar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 300, 260));
 
         txtFecha.setColumns(20);
         txtFecha.setRows(5);
@@ -83,13 +84,13 @@ public class FormCrear extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 49, 233, -1));
 
         jLabel3.setText("MEDICO");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 49, 233, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 233, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 77, 201, 44));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 80, 201, 44));
 
         tblDatosMedico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,7 +105,7 @@ public class FormCrear extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblDatosMedico);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 139, 201, 155));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 201, 155));
 
         tblDueno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -119,16 +120,16 @@ public class FormCrear extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tblDueno);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 139, 380, 155));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 140, 380, 155));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane5.setViewportView(jTextArea2);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 77, 201, 44));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, 201, 44));
 
         jLabel4.setText("Dueño");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 49, 233, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, 233, -1));
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -179,13 +180,13 @@ public class FormCrear extends javax.swing.JFrame {
         getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 411, 201, 155));
 
         jLabel7.setText("Mascota");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 318, 246, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 50, 200, -1));
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
         jScrollPane10.setViewportView(jTextArea5);
 
-        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 346, 246, 47));
+        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 80, 200, 47));
 
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -200,10 +201,10 @@ public class FormCrear extends javax.swing.JFrame {
         ));
         jScrollPane11.setViewportView(jTable5);
 
-        getContentPane().add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 411, 246, 155));
+        getContentPane().add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 150, 200, 155));
 
         jButton1.setText("Crear");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(819, 77, 119, 44));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 80, 119, 44));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -233,21 +234,23 @@ public class FormCrear extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionarMAscDueño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionarMAscDueño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionarMAscDueño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionarMAscDueño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormCrear().setVisible(true);
+                new GestionarMAscDueño().setVisible(true);
             }
         });
     }
