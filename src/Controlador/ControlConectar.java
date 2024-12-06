@@ -1,49 +1,131 @@
 package Controlador;
-
+import Modelo.Clases.CamposCita;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-//Modelos de las tablas
 import Modelo.Clases.CamposdeTabla;
 import Modelo.Clases.CamposdeTablaMedico;
-import Modelo.Clases.TablaDueno;
-//formularios 
+import Modelo.Clases.CamposMedicamentos; 
 import Vista.EstadisticasR;
 import Vista.GestionarMAscDueño;
+import Vista.GestiondeCitas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//import java.awt.geom.Area;
 import javax.swing.JOptionPane;
 
-public class ControlConectar implements ActionListener {
-    
-    //titulos de las tablas 
-    //Creo que se pueden en un archivo de parametros o meterlos en otra clase 
-    String[] titulo = { "ID ayudante", "NOMBRE ayudante", "Id del doctor"};
-    String[] tituloMedic = { "ID Medico", "nombre", "Id del local ","Apellidos M","Apellido P","telefono"};
-    String[] tituloDue = { "ID Medico", "nombre", "Id del local ","Apellidos M","Apellido P","Correo","telefono"};
-   
+public class ControlConectar implements Parame {
+    // ya lo puse en parametros xd :V
     EstadisticasR vista;
+    GestiondeCitas vistaCita;
     GestionarMAscDueño vistaC;//llamar a lformu crear 
 
+    public Connection conexion = null;
+    public Statement st= null;
+    public ResultSet rs;
+    public PreparedStatement ps;
+    public ResultSetMetaData mdata;
     
+    
+    
+     public void ConectarBD(){
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(RUTA, USUARIO, CLAVE);
+            st=conexion.createStatement();
+        }catch (Exception ex){
+            JOptionPane.showMessageDialog(null,"ERROR no se puede conectar a la BD..." + ex);
+        }
+    }
     
     //esta vaian se repitira segun los form que creen 
     //si se extiende mucho se tendra que crear una clase para solo esto creo.. o le hacemos algo para que no se vea feo 
     public ControlConectar(EstadisticasR fl) {
         vista = fl;
-        MostrarDatosAyudantes();
-        MostrarDatosMedico();
+        //MostrarDatosAyudantes();
+        //MostrarDatosMedico();
+        MostrarMedicamento();
         //MostrarDatosDuen();
     }
     
      public ControlConectar(GestionarMAscDueño fl) {
         vistaC = fl;
        // MostrarDatosAyudantes();
-        MostrarDatosMedico();
+       MostrarMedicamento(); 
+       //MostrarDatosMedico();
        // MostrarDatosDuen();
     }
     
-    
+     public ControlConectar(GestiondeCitas fl) {
+        vistaCita = fl;
+       // MostrarDatosAyudantes();
+        MostrarCitas();
+       //MostrarDatosMedico();
+       // MostrarDatosDuen();
+    }
+     
+     
+    private void MostrarCitas() {
+        DefaultTableModel mt = new DefaultTableModel(null, tituloCita);
+        if (vistaCita != null) {
+        vistaCita.tblCitas1.setModel(mt);
+           }
+           if (vistaCita != null) {
+        vistaCita.tblCitas1.setModel(mt);} // todas las tablas del mismo tipo deben llamarse igual 
+
+        // Conexión a la base de datos
+        try {
+             ConectarBD();
+            ResultSet rs = st.executeQuery("SELECT * FROM citas;");
+            
+            int num = 0;
+            while (rs.next()) {
+                CamposCita Ct = new CamposCita();
+                Ct.setIdCita(rs.getInt("id_cita"));
+                Ct.setIdMascota(rs.getInt("id_mascota"));
+                Ct.setIdTrabajador(rs.getInt("id_trabajador"));
+                Ct.setFecha(rs.getDate("fecha"));
+                Ct.setMotivo(rs.getString("motivo")); 
+                num++;
+                mt.addRow(Ct.Registro(num));
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "ERROR al conectarse a la BD: " + ex);
+        }
+    }
+     
+
+    private void MostrarMedicamento() {
+        DefaultTableModel mt = new DefaultTableModel(null, MedicamentoLis);
+        if (vista != null) {
+        vista.tblDatos.setModel(mt);
+           }
+           if (vistaC != null) {
+        vistaC.tblDatosMedico.setModel(mt);// todas las tablas del mismo tipo deben llamarse igual
+    }
+
+        // Conexión a la base de datos
+        try {
+             ConectarBD();
+            ResultSet rs = st.executeQuery("SELECT * FROM lista_medicamento ORDER BY 2;");
+            
+            int num = 0;
+            while (rs.next()) {
+                CamposMedicamentos ar = new CamposMedicamentos();
+                ar.setIdListaMedicamento(rs.getInt("id_lista_medicamento"));
+                ar.setNombre(rs.getString("nombre"));
+                ar.setPrincipioActivo(rs.getString("Principio activo"));
+                ar.setDosis(rs.getInt("dosis"));
+                ar.setFormaFarmaceutica(rs.getString("FormaFar"));
+                ar.setViaAdministracion(rs.getString("Administracion"));
+                num++;
+                mt.addRow(ar.Registro(num));
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "ERROR al conectarse a la BD: " + ex);
+        }
+    }
+
+     
+     
 
     private void MostrarDatosAyudantes() {
         DefaultTableModel mt = new DefaultTableModel(null, titulo);
@@ -56,11 +138,7 @@ public class ControlConectar implements ActionListener {
 
         // Conexión a la base de datos
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/test", "root", ""
-            );
-            Statement st = con.createStatement();
+            ConectarBD();
             ResultSet rs = st.executeQuery("SELECT * FROM ayudante ORDER BY 2;");
             
             int num = 0;
@@ -91,11 +169,7 @@ public class ControlConectar implements ActionListener {
 
         // Conexión a la base de datos
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/test", "root", ""
-            );
-            Statement st = con.createStatement();
+            ConectarBD();
             ResultSet rs = st.executeQuery("SELECT * FROM medico ORDER BY 2;");
             
             int num = 0;
@@ -117,43 +191,8 @@ public class ControlConectar implements ActionListener {
         }
     }
 
-     private void MostrarDatosDuen() {
-        DefaultTableModel mt = new DefaultTableModel(null, tituloDue);
-        vistaC.tblDueno.setModel(mt);
-        if (vista != null) {
-        vista.tblDatosMedico.setModel(mt);
-           }
-           if (vistaC != null) {
-        vistaC.tblDatosMedico.setModel(mt);
-    }
-
-        // Conexión a la base de datos
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/test", "root", ""
-            );
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM mascota ORDER BY 2;");
-            
-            int num = 0;
-            while (rs.next()) {
-                TablaDueno Duen = new TablaDueno();
-                Duen.setIddueno(rs.getInt("id_dueno"));
-                Duen.setNombreDueno(rs.getString("nombre"));
-                Duen.setApellidoM(rs.getString("Apellido_M"));
-                Duen.setApellidoP(rs.getString("Apellido_P"));
-                Duen.setCorreo(rs.getString("correo"));
-                Duen.setTelefono(rs.getInt("telefono"));
-                num++;
-                mt.addRow(Duen.Registro(num));
-            }
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "ERROR al conectarse a la BD: " + ex);
-        }
-    }
-    
-    @Override
+     
+ 
     public void actionPerformed(ActionEvent e) { 
     }
 }
