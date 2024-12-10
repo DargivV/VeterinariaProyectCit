@@ -8,12 +8,12 @@ package Vista;
  *
  * @author Acer
  */
-public class frmModificarMascotas extends javax.swing.JInternalFrame {
+public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form frmModificarMascotas
+     * Creates new form frmRegistroMedicamentos
      */
-    public frmModificarMascotas() {
+    public frmRegistroMedicamentos() {
         initComponents();
     }
 
@@ -28,27 +28,23 @@ public class frmModificarMascotas extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Modificar Mascotas");
+        jLabel1.setText("Registro Medicamentos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(563, 563, 563)
+                .addGap(528, 528, 528)
                 .addComponent(jLabel1)
-                .addContainerGap(538, Short.MAX_VALUE))
+                .addContainerGap(615, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel1)
-                .addContainerGap(529, Short.MAX_VALUE))
+                .addContainerGap(517, Short.MAX_VALUE))
         );
 
         pack();

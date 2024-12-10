@@ -29,11 +29,17 @@ public class frmMenu extends javax.swing.JFrame {
         jdpnContenedor = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
+        jmitemRegistrarEmpleado = new javax.swing.JMenuItem();
+        jmitemRegistrarCitas = new javax.swing.JMenuItem();
+        jmitemRegistrarMedicamentos = new javax.swing.JMenuItem();
         jMenuMascotas = new javax.swing.JMenu();
         jmitemRegistrarCliente = new javax.swing.JMenuItem();
         jmitemRegistrarMascota = new javax.swing.JMenuItem();
-        jmitemModificarMascotas = new javax.swing.JMenuItem();
-        jmitemModificarClientes = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jmitemReporteCitas = new javax.swing.JMenuItem();
+        jmitemReporteEmpleados = new javax.swing.JMenuItem();
+        jmitemReporteClientes = new javax.swing.JMenuItem();
+        jmitemReporteMascotas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +55,31 @@ public class frmMenu extends javax.swing.JFrame {
         );
 
         jMenu2.setText("Veterinaria");
+
+        jmitemRegistrarEmpleado.setText("Registrar Empleados");
+        jmitemRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmitemRegistrarEmpleadoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmitemRegistrarEmpleado);
+
+        jmitemRegistrarCitas.setText("Registrar Citas");
+        jmitemRegistrarCitas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmitemRegistrarCitasActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmitemRegistrarCitas);
+
+        jmitemRegistrarMedicamentos.setText("Registrar Medicamentos");
+        jmitemRegistrarMedicamentos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmitemRegistrarMedicamentosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmitemRegistrarMedicamentos);
+
         jMenuBar1.add(jMenu2);
 
         jMenuMascotas.setText("Mascotas");
@@ -64,23 +95,28 @@ public class frmMenu extends javax.swing.JFrame {
         });
         jMenuMascotas.add(jmitemRegistrarMascota);
 
-        jmitemModificarMascotas.setText("Modificar Mascotas");
-        jmitemModificarMascotas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmitemModificarMascotasActionPerformed(evt);
-            }
-        });
-        jMenuMascotas.add(jmitemModificarMascotas);
-
-        jmitemModificarClientes.setText("Modificar Clientes");
-        jmitemModificarClientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmitemModificarClientesActionPerformed(evt);
-            }
-        });
-        jMenuMascotas.add(jmitemModificarClientes);
-
         jMenuBar1.add(jMenuMascotas);
+
+        jMenu1.setText("Reportes");
+
+        jmitemReporteCitas.setText("Citas");
+        jMenu1.add(jmitemReporteCitas);
+
+        jmitemReporteEmpleados.setText("Empleados");
+        jmitemReporteEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmitemReporteEmpleadosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmitemReporteEmpleados);
+
+        jmitemReporteClientes.setText("Clientes");
+        jMenu1.add(jmitemReporteClientes);
+
+        jmitemReporteMascotas.setText("Mascotas");
+        jMenu1.add(jmitemReporteMascotas);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -102,13 +138,21 @@ public class frmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmitemRegistrarMascotaActionPerformed
 
-    private void jmitemModificarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemModificarClientesActionPerformed
+    private void jmitemRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemRegistrarEmpleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jmitemModificarClientesActionPerformed
+    }//GEN-LAST:event_jmitemRegistrarEmpleadoActionPerformed
 
-    private void jmitemModificarMascotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemModificarMascotasActionPerformed
+    private void jmitemReporteEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemReporteEmpleadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jmitemModificarMascotasActionPerformed
+    }//GEN-LAST:event_jmitemReporteEmpleadosActionPerformed
+
+    private void jmitemRegistrarCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemRegistrarCitasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmitemRegistrarCitasActionPerformed
+
+    private void jmitemRegistrarMedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmitemRegistrarMedicamentosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmitemRegistrarMedicamentosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,13 +190,19 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu1;
+    public javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuMascotas;
     public javax.swing.JDesktopPane jdpnContenedor;
-    public javax.swing.JMenuItem jmitemModificarClientes;
-    public javax.swing.JMenuItem jmitemModificarMascotas;
+    public javax.swing.JMenuItem jmitemRegistrarCitas;
     public javax.swing.JMenuItem jmitemRegistrarCliente;
+    public javax.swing.JMenuItem jmitemRegistrarEmpleado;
     public javax.swing.JMenuItem jmitemRegistrarMascota;
+    public javax.swing.JMenuItem jmitemRegistrarMedicamentos;
+    public javax.swing.JMenuItem jmitemReporteCitas;
+    public javax.swing.JMenuItem jmitemReporteClientes;
+    public javax.swing.JMenuItem jmitemReporteEmpleados;
+    public javax.swing.JMenuItem jmitemReporteMascotas;
     // End of variables declaration//GEN-END:variables
 }

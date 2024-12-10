@@ -6,20 +6,22 @@ import Vista.*;
 
 public class Main {
     //Formularios vistas
-    public static frmRegistrarClientes frmRC;
-    public static frmRegistrarMascotas frmRM;
-    public static frmModificarMascotas frmMM;
-    public static frmModificarClientes frmMC;
+    public static frmRegistrarClientes frmRClientes;
+    public static frmRegistrarMascotas frmRMascotas;
+    public static frmRegistroEmpleados frmREmpleados;
+    public static frmRegistroCitas frmRCitas;
+    public static frmRegistroMedicamentos frmRMedicamentos;
     //Controladores
-    public static ControladorRegistrarCliente ControlRC;
-    public static ControladorRegistrarMascota ControlRM;
-    public static ControladorModificarMascotas ControlMM;
-    public static ControladorModificarClientes ControlMC;
+    public static ControladorRegistrarCliente ControlRClientes;
+    public static ControladorRegistrarMascota ControlRMascotas;
+    public static ControladorRegistroEmpleados ControlREmpleados;
+    public static ControladorRegistroMedicamentos ControlRMedicamentos;
+    public static ControladorRegistroCitas ControladorRCitas;
     //formulario menu y controlador
-    public static frmMenu frmM;
-    public static ControladorMenu ControlM;
+    public static frmMenu frmMenu;
+    public static ControladorMenu ControlMenu;
     public static void main(String[]args){
-        frmM = new frmMenu();
-        ControlM = new ControladorMenu(frmM);
+        frmMenu = new frmMenu();
+        ControlMenu = new ControladorMenu(frmMenu);
     }
 }
