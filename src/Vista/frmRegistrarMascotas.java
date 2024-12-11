@@ -30,7 +30,6 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txt_codigoMascota = new javax.swing.JTextField();
         txt_nombreMascota = new javax.swing.JTextField();
-        txt_especie = new javax.swing.JTextField();
         cbx_sexo = new javax.swing.JComboBox<>();
         btn_buscar = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
@@ -50,6 +49,7 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         txt_apellidoM = new javax.swing.JTextField();
         txt_telefono = new javax.swing.JTextField();
         btn_eliminar = new javax.swing.JButton();
+        cbx_especie = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1280, 620));
@@ -80,18 +80,17 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         txt_nombreMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NOMBRE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.add(txt_nombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 210, 50));
 
-        txt_especie.setBackground(new java.awt.Color(255, 255, 255));
-        txt_especie.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txt_especie.setForeground(new java.awt.Color(0, 0, 0));
-        txt_especie.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "ESPECIE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(txt_especie, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 170, 50));
-
         cbx_sexo.setBackground(new java.awt.Color(255, 255, 255));
         cbx_sexo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         cbx_sexo.setForeground(new java.awt.Color(0, 0, 0));
         cbx_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbx_sexo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "SEXO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(cbx_sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 170, 50));
+        cbx_sexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbx_sexoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbx_sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 170, 50));
 
         btn_buscar.setBackground(new java.awt.Color(204, 204, 255));
         btn_buscar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -226,6 +225,18 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         });
         jPanel1.add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 140, 90, 50));
 
+        cbx_especie.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_especie.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_especie.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_especie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_especie.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "ESPECIE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        cbx_especie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbx_especieActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbx_especie, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 170, 50));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 590));
 
         pack();
@@ -251,6 +262,14 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_eliminarActionPerformed
 
+    private void cbx_sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_sexoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbx_sexoActionPerformed
+
+    private void cbx_especieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_especieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbx_especieActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_actualizar;
@@ -259,6 +278,7 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
     public javax.swing.JButton btn_eliminar;
     public javax.swing.JButton btn_guardar;
     public javax.swing.JButton btn_limpiar;
+    public javax.swing.JComboBox<String> cbx_especie;
     public javax.swing.JComboBox<String> cbx_sexo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -272,7 +292,6 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txt_apellidoP;
     public javax.swing.JTextField txt_codigoMascota;
     public javax.swing.JTextField txt_dniDueño;
-    public javax.swing.JTextField txt_especie;
     public javax.swing.JTextField txt_nombreDueño;
     public javax.swing.JTextField txt_nombreMascota;
     public javax.swing.JTextField txt_raza;

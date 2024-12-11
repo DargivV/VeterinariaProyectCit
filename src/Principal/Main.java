@@ -1,10 +1,13 @@
 package Principal;
 
 import Controlador.*;
-import Vista.Principal.frmMenu;
+import VistaPrincipal.*;
 import Vista.*;
 
 public class Main {
+    //Formulario Inicio
+    public static frmInicio frmI;
+    public static ControladorInicio ControladorI;
     //Formularios vistas
     public static frmRegistrarClientes frmRClientes;
     public static frmRegistrarMascotas frmRMascotas;

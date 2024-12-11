@@ -2,16 +2,19 @@ package Controlador;
 import Formatos.CentrarForma;
 import Principal.Main;
 import Procesos.*;
-import Vista.Principal.frmMenu;
+import VistaPrincipal.frmMenu;
 import Vista.*;
+import VistaPrincipal.frmInicio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import javax.swing.event.MenuListener;
 public class ControladorMenu implements ActionListener{
     frmMenu vista;
     ProcesosMenu ProcesosM = new ProcesosMenu();
     public ControladorMenu(frmMenu fm) {
         vista = fm;
+        vista.jmitemInicio.addActionListener(this);
         //Items Menu para Mascotas
         vista.jmitemRegistrarCliente.addActionListener(this);
         vista.jmitemRegistrarMascota.addActionListener(this);
@@ -34,6 +37,13 @@ public class ControladorMenu implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == vista.jmitemInicio){
+            Main.frmI = new frmInicio();
+            Main.ControladorI = new ControladorInicio(Main.frmI);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmI);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmI);
+        }
         //Menu mascotas
         if(e.getSource() == vista.jmitemRegistrarCliente){
             Main.frmRClientes = new frmRegistrarClientes();
@@ -107,5 +117,6 @@ public class ControladorMenu implements ActionListener{
             vista.jdpnContenedor.add(Main.frmRPMedicamentos);
             CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPMedicamentos);
         }
+        
     }
 }

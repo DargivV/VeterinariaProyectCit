@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista.Principal;
+package VistaPrincipal;
 
 /**
  *
@@ -28,6 +28,8 @@ public class frmMenu extends javax.swing.JFrame {
 
         jdpnContenedor = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
+        jmenuInicio = new javax.swing.JMenu();
+        jmitemInicio = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmitemRegistrarEmpleado = new javax.swing.JMenuItem();
         jmitemRegistrarCitas = new javax.swing.JMenuItem();
@@ -44,6 +46,8 @@ public class frmMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jdpnContenedor.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jdpnContenedorLayout = new javax.swing.GroupLayout(jdpnContenedor);
         jdpnContenedor.setLayout(jdpnContenedorLayout);
         jdpnContenedorLayout.setHorizontalGroup(
@@ -54,6 +58,13 @@ public class frmMenu extends javax.swing.JFrame {
             jdpnContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 479, Short.MAX_VALUE)
         );
+
+        jmenuInicio.setText("Inicio");
+
+        jmitemInicio.setText("Inicio");
+        jmenuInicio.add(jmitemInicio);
+
+        jMenuBar1.add(jmenuInicio);
 
         jMenu2.setText("Veterinaria");
 
@@ -199,6 +210,8 @@ public class frmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuMascotas;
     public javax.swing.JDesktopPane jdpnContenedor;
+    public javax.swing.JMenu jmenuInicio;
+    public javax.swing.JMenuItem jmitemInicio;
     public javax.swing.JMenuItem jmitemRegistrarCitas;
     public javax.swing.JMenuItem jmitemRegistrarCliente;
     public javax.swing.JMenuItem jmitemRegistrarEmpleado;
