@@ -3,70 +3,46 @@ package Modelo.Clases;
 import java.util.Date;
 
 public class CamposCita {
-    private int id_cita;
+    private int cod_cita;
     private int id_mascota;
-    private int id_trabajador;
+    private int id_doctor;
+    private int tipo;
     private Date fecha;
     private String motivo;
-
     // Constructor vacío
     public CamposCita() {}
 
-    // Constructor con parámetros
-    public CamposCita(int idCita, int idMascota, int idTrabajador, Date fecha, String motivo) {
-        this.id_cita = idCita;
-        this.id_mascota = idMascota;
-        this.id_trabajador = idTrabajador;
+    public CamposCita(int cod_cita, int id_mascota, int id_doctor, int tipo, Date fecha, String motivo) {
+        this.cod_cita = cod_cita;
+        this.id_mascota = id_mascota;
+        this.id_doctor = id_doctor;
+        this.tipo = tipo;
         this.fecha = fecha;
         this.motivo = motivo;
     }
 
-     public Object[] Registro(int num) {
-        Object[] fila = {num, id_cita, id_mascota, id_trabajador, fecha, motivo};
-        return fila;
-    }
-    
-    
-    
-    public int getIdCita() {
-        return id_cita;
+    public int getCod_cita() {
+        return cod_cita;
     }
 
-    public void setIdCita(int idCita) {
-        this.id_cita = idCita;
-    }
-
-    public int getIdMascota() {
+    public int getId_mascota() {
         return id_mascota;
     }
 
-    public void setIdMascota(int idMascota) {
-        this.id_mascota = idMascota;
+    public int getId_doctor() {
+        return id_doctor;
     }
 
-    public int getIdTrabajador() {
-        return id_trabajador;
-    }
-
-    public void setIdTrabajador(int idTrabajador) {
-        this.id_trabajador = idTrabajador;
+    public int getTipo() {
+        return tipo;
     }
 
     public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
-
     public String getMotivo() {
         return motivo;
     }
-
-    public void setMotivo(String motivo) {
-        this.motivo = motivo;
-    }
-
-     
+    
 }

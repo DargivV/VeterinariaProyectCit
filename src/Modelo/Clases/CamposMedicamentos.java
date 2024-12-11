@@ -1,66 +1,69 @@
 package Modelo.Clases;
-
 public class CamposMedicamentos {
-    private int idListaMedicamento;
+    private int cod_Medicamento;
     private String nombre;
-    private String principioActivo;
-    private int dosis;
-    private String formaFarmaceutica;
-    private String viaAdministracion;
-//jodete 
+    private String tipo;
+    private String principio_Activo;
+    private String funcion_Terapeutica;
+    private int cantidad_stock;
+    private int cantidad_minima;
+    private String fecha_vencimiento;
+    private double precio_unidad;
+    private String descripcion;
+    //vas a caer lenin
     public CamposMedicamentos(){}
 
-    public Object[] Registro(int num) {
-        Object[] fila = {num, idListaMedicamento, nombre, principioActivo, dosis, formaFarmaceutica, viaAdministracion};
-        return fila;
+    public CamposMedicamentos(int cod_Medicamento, String nombre, String tipo, String principio_Activo, String funcion_Terapeutica, int cantidad_stock, int cantidad_minima, String fecha_vencimiento, double precio_unidad, String descripcion) {
+        this.cod_Medicamento = cod_Medicamento;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.principio_Activo = principio_Activo;
+        this.funcion_Terapeutica = funcion_Terapeutica;
+        this.cantidad_stock = cantidad_stock;
+        this.cantidad_minima = cantidad_minima;
+        this.fecha_vencimiento = fecha_vencimiento;
+        this.precio_unidad = precio_unidad;
+        this.descripcion = descripcion;
     }
 
-    // Getters y Setters
-    public int getIdListaMedicamento() {
-        return idListaMedicamento;
-    }
-
-    public void setIdListaMedicamento(int idListaMedicamento) {
-        this.idListaMedicamento = idListaMedicamento;
+    public int getCod_Medicamento() {
+        return cod_Medicamento;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getTipo() {
+        return tipo;
     }
 
-    public String getPrincipioActivo() {
-        return principioActivo;
+    public String getPrincipio_Activo() {
+        return principio_Activo;
     }
 
-    public void setPrincipioActivo(String principioActivo) {
-        this.principioActivo = principioActivo;
+    public String getFuncion_Terapeutica() {
+        return funcion_Terapeutica;
     }
 
-    public int getDosis() {
-        return dosis;
+    public int getCantidad_stock() {
+        return cantidad_stock;
     }
 
-    public void setDosis(int dosis) {
-        this.dosis = dosis;
+    public int getCantidad_minima() {
+        return cantidad_minima;
     }
 
-    public String getFormaFarmaceutica() {
-        return formaFarmaceutica;
+    public String getFecha_vencimiento() {
+        return fecha_vencimiento;
     }
 
-    public void setFormaFarmaceutica(String formaFarmaceutica) {
-        this.formaFarmaceutica = formaFarmaceutica;
+    public double getPrecio_unidad() {
+        return precio_unidad;
     }
 
-    public String getViaAdministracion() {
-        return viaAdministracion;
+    public String getDescripcion() {
+        return descripcion;
     }
-
-    public void setViaAdministracion(String viaAdministracion) {
-        this.viaAdministracion = viaAdministracion;
-    }
+    
 }

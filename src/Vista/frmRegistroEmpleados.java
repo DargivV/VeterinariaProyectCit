@@ -26,32 +26,220 @@ public class frmRegistroEmpleados extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        txt_codigo = new javax.swing.JTextField();
+        txt_nombre = new javax.swing.JTextField();
+        txt_apellidoP = new javax.swing.JTextField();
+        txt_apellidoM = new javax.swing.JTextField();
+        txt_DNI = new javax.swing.JTextField();
+        txt_telefono = new javax.swing.JTextField();
+        jdtc_FechaNacimiento = new com.toedter.calendar.JDateChooser();
+        txt_direccion = new javax.swing.JTextField();
+        txt_correo = new javax.swing.JTextField();
+        cbx_Turno = new javax.swing.JComboBox<>();
+        cbx_TipoEmpleado = new javax.swing.JComboBox<>();
+        btn_buscar = new javax.swing.JButton();
+        btn_guardar = new javax.swing.JButton();
+        btn_buscar1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_REmpleado = new javax.swing.JTable();
+        btn_actualizar = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 620));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("REGISTRO EMPLEADOS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
+
+        txt_codigo.setBackground(new java.awt.Color(255, 255, 255));
+        txt_codigo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_codigo.setForeground(new java.awt.Color(0, 0, 0));
+        txt_codigo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CODIGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 130, 50));
+
+        txt_nombre.setBackground(new java.awt.Color(255, 255, 255));
+        txt_nombre.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_nombre.setForeground(new java.awt.Color(0, 0, 0));
+        txt_nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NOMBRES", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 200, 50));
+
+        txt_apellidoP.setBackground(new java.awt.Color(255, 255, 255));
+        txt_apellidoP.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_apellidoP.setForeground(new java.awt.Color(0, 0, 0));
+        txt_apellidoP.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "APELLIDO PATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_apellidoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, 160, 50));
+
+        txt_apellidoM.setBackground(new java.awt.Color(255, 255, 255));
+        txt_apellidoM.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_apellidoM.setForeground(new java.awt.Color(0, 0, 0));
+        txt_apellidoM.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "APELLIDO MATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_apellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 170, 50));
+
+        txt_DNI.setBackground(new java.awt.Color(255, 255, 255));
+        txt_DNI.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_DNI.setForeground(new java.awt.Color(0, 0, 0));
+        txt_DNI.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DNI", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_DNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 120, 50));
+
+        txt_telefono.setBackground(new java.awt.Color(255, 255, 255));
+        txt_telefono.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_telefono.setForeground(new java.awt.Color(0, 0, 0));
+        txt_telefono.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TELEFONO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 70, 130, 50));
+
+        jdtc_FechaNacimiento.setBackground(new java.awt.Color(255, 255, 255));
+        jdtc_FechaNacimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NACIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaNacimiento.setForeground(new java.awt.Color(0, 153, 0));
+        jPanel1.add(jdtc_FechaNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 110, 50));
+
+        txt_direccion.setBackground(new java.awt.Color(255, 255, 255));
+        txt_direccion.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_direccion.setForeground(new java.awt.Color(0, 0, 0));
+        txt_direccion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DIRECCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txt_direccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_direccionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 270, 50));
+
+        txt_correo.setBackground(new java.awt.Color(255, 255, 255));
+        txt_correo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_correo.setForeground(new java.awt.Color(0, 0, 0));
+        txt_correo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CORREO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txt_correo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_correoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 230, 50));
+
+        cbx_Turno.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_Turno.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_Turno.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_Turno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_Turno.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TURNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_Turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 130, 130, 50));
+
+        cbx_TipoEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_TipoEmpleado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_TipoEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_TipoEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_TipoEmpleado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TIPO EMPLEADO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_TipoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 130, 150, 50));
+
+        btn_buscar.setBackground(new java.awt.Color(204, 204, 255));
+        btn_buscar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_buscar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_buscar.setText("BUSCAR");
+        btn_buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 80, 80, 40));
+
+        btn_guardar.setBackground(new java.awt.Color(204, 255, 204));
+        btn_guardar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_guardar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_guardar.setText("REGISTRAR");
+        btn_guardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 140, 110, 40));
+
+        btn_buscar1.setBackground(new java.awt.Color(255, 204, 204));
+        btn_buscar1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_buscar1.setForeground(new java.awt.Color(0, 0, 0));
+        btn_buscar1.setText("ELIMINAR");
+        btn_buscar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_buscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 140, 100, 40));
+
+        tbl_REmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        tbl_REmpleado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tbl_REmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        tbl_REmpleado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbl_REmpleado);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 1170, 360));
+
+        btn_actualizar.setBackground(new java.awt.Color(204, 255, 255));
+        btn_actualizar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_actualizar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_actualizar.setText("ACTUALIZAR");
+        btn_actualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_actualizarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 140, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(560, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(586, 586, 586))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1270, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jLabel1)
-                .addContainerGap(506, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txt_direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_direccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_direccionActionPerformed
+
+    private void txt_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_correoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_correoActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void btn_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_actualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_actualizarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_actualizar;
+    public javax.swing.JButton btn_buscar;
+    public javax.swing.JButton btn_buscar1;
+    public javax.swing.JButton btn_guardar;
+    public javax.swing.JComboBox<String> cbx_TipoEmpleado;
+    public javax.swing.JComboBox<String> cbx_Turno;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    public com.toedter.calendar.JDateChooser jdtc_FechaNacimiento;
+    public javax.swing.JTable tbl_REmpleado;
+    public javax.swing.JTextField txt_DNI;
+    public javax.swing.JTextField txt_apellidoM;
+    public javax.swing.JTextField txt_apellidoP;
+    public javax.swing.JTextField txt_codigo;
+    public javax.swing.JTextField txt_correo;
+    public javax.swing.JTextField txt_direccion;
+    public javax.swing.JTextField txt_nombre;
+    public javax.swing.JTextField txt_telefono;
     // End of variables declaration//GEN-END:variables
 }

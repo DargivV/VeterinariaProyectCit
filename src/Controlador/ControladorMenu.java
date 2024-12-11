@@ -19,6 +19,12 @@ public class ControladorMenu implements ActionListener{
         vista.jmitemRegistrarEmpleado.addActionListener(this);
         vista.jmitemRegistrarCitas.addActionListener(this);
         vista.jmitemRegistrarMedicamentos.addActionListener(this);
+        //Imtens Menu Reportes
+        vista.jmitemReporteCitas.addActionListener(this);
+        vista.jmitemReporteClientes.addActionListener(this);
+        vista.jmitemReporteEmpleados.addActionListener(this);
+        vista.jmitemReporteMascotas.addActionListener(this);
+        //Metodos extra
         fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
         fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
         fm.setVisible(true);
@@ -27,6 +33,7 @@ public class ControladorMenu implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //Menu mascotas
         if(e.getSource() == vista.jmitemRegistrarCliente){
             Main.frmRClientes = new frmRegistrarClientes();
             Main.ControlRClientes = new ControladorRegistrarCliente(Main.frmRClientes);
@@ -41,6 +48,7 @@ public class ControladorMenu implements ActionListener{
             vista.jdpnContenedor.add(Main.frmRMascotas);
             CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRMascotas);
         }
+        //Menu veterinaria
         if(e.getSource() == vista.jmitemRegistrarCitas){
             Main.frmRCitas = new frmRegistroCitas();
             Main.ControladorRCitas = new ControladorRegistroCitas(Main.frmRCitas);
@@ -61,6 +69,35 @@ public class ControladorMenu implements ActionListener{
             ProcesosM.cerrarFormularios(vista.jdpnContenedor);
             vista.jdpnContenedor.add(Main.frmRMedicamentos);
             CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRMedicamentos);
+        }
+        //Menu reportes
+        if(e.getSource() == vista.jmitemReporteCitas){
+            Main.frmRPCitas = new frmReporteCitas();
+            Main.ControladorRPCitas = new ControladorReporteCitas(Main.frmRPCitas);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmRPCitas);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPCitas);
+        }    
+        if(e.getSource() == vista.jmitemReporteClientes){
+            Main.frmRPClientes = new frmReporteClientes();
+            Main.ControladorRPClientes = new ControladorReporteClientes(Main.frmRPClientes);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmRPClientes);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPClientes);
+        }
+        if(e.getSource() == vista.jmitemReporteEmpleados){
+            Main.frmRPEmpleados = new frmReporteEmpleados();
+            Main.ControladorRPEmpleados = new ControladorReporteEmpleados(Main.frmRPEmpleados);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmRPEmpleados);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPEmpleados);
+        }
+        if(e.getSource() == vista.jmitemReporteMascotas){
+            Main.frmRPMacotas = new frmReporteMascotas();
+            Main.ControladorRPMascotas = new ControladorReporteMascotas(Main.frmRPMacotas);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmRPMacotas);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPMacotas);
         }
     }
 }

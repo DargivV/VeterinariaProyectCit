@@ -26,32 +26,184 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        txt_codigo = new javax.swing.JTextField();
+        txt_nombre = new javax.swing.JTextField();
+        txt_pricipio_Activo = new javax.swing.JTextField();
+        jdtc_FechaVencimiento = new com.toedter.calendar.JDateChooser();
+        cbx_funcionTerapeutica = new javax.swing.JComboBox<>();
+        cbx_TipoMedicamento = new javax.swing.JComboBox<>();
+        btn_buscar = new javax.swing.JButton();
+        btn_guardar = new javax.swing.JButton();
+        btn_buscar1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_RMedicamento = new javax.swing.JTable();
+        spn_Stock = new javax.swing.JSpinner();
+        spn_StockMinimo = new javax.swing.JSpinner();
+        spn_PrecioUnidad = new javax.swing.JSpinner();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txa_descripcion = new javax.swing.JTextArea();
+        btn_actualizar = new javax.swing.JButton();
 
-        jLabel1.setText("Registro Medicamentos");
+        setMinimumSize(new java.awt.Dimension(1280, 620));
+        setPreferredSize(new java.awt.Dimension(1280, 620));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("REGISTRO MEDICAMENTOS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
+
+        txt_codigo.setBackground(new java.awt.Color(255, 255, 255));
+        txt_codigo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_codigo.setForeground(new java.awt.Color(0, 0, 0));
+        txt_codigo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CODIGO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 130, 50));
+
+        txt_nombre.setBackground(new java.awt.Color(255, 255, 255));
+        txt_nombre.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_nombre.setForeground(new java.awt.Color(0, 0, 0));
+        txt_nombre.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NOMBRE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 190, 50));
+
+        txt_pricipio_Activo.setBackground(new java.awt.Color(255, 255, 255));
+        txt_pricipio_Activo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_pricipio_Activo.setForeground(new java.awt.Color(0, 0, 0));
+        txt_pricipio_Activo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "PRINCIPIO ACTIVO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_pricipio_Activo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 180, 50));
+
+        jdtc_FechaVencimiento.setBackground(new java.awt.Color(255, 255, 255));
+        jdtc_FechaVencimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA VENCIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaVencimiento.setForeground(new java.awt.Color(0, 153, 0));
+        jPanel1.add(jdtc_FechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 170, 50));
+
+        cbx_funcionTerapeutica.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_funcionTerapeutica.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_funcionTerapeutica.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_funcionTerapeutica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_funcionTerapeutica.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FUNCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_funcionTerapeutica, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 170, 50));
+
+        cbx_TipoMedicamento.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_TipoMedicamento.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_TipoMedicamento.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_TipoMedicamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_TipoMedicamento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TIPO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_TipoMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 160, 50));
+
+        btn_buscar.setBackground(new java.awt.Color(204, 204, 255));
+        btn_buscar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_buscar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_buscar.setText("BUSCAR");
+        btn_buscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 80, 90, 50));
+
+        btn_guardar.setBackground(new java.awt.Color(204, 255, 204));
+        btn_guardar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_guardar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_guardar.setText("GUARDAR");
+        btn_guardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 80, 110, 50));
+
+        btn_buscar1.setBackground(new java.awt.Color(255, 204, 204));
+        btn_buscar1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_buscar1.setForeground(new java.awt.Color(0, 0, 0));
+        btn_buscar1.setText("ELIMINAR");
+        btn_buscar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_buscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 140, 90, 50));
+
+        tbl_RMedicamento.setBackground(new java.awt.Color(255, 255, 255));
+        tbl_RMedicamento.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tbl_RMedicamento.setForeground(new java.awt.Color(0, 0, 0));
+        tbl_RMedicamento.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbl_RMedicamento);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 1170, 360));
+
+        spn_Stock.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spn_Stock.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "STOCK", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(spn_Stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 90, -1));
+
+        spn_StockMinimo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spn_StockMinimo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "STOCK MIN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(spn_StockMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 90, -1));
+
+        spn_PrecioUnidad.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spn_PrecioUnidad.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "PRECIO UNIDAD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(spn_PrecioUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 130, -1));
+
+        txa_descripcion.setBackground(new java.awt.Color(255, 255, 255));
+        txa_descripcion.setColumns(20);
+        txa_descripcion.setForeground(new java.awt.Color(0, 0, 0));
+        txa_descripcion.setRows(5);
+        txa_descripcion.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DESCRIPCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jScrollPane2.setViewportView(txa_descripcion);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, -1, 120));
+
+        btn_actualizar.setBackground(new java.awt.Color(204, 255, 255));
+        btn_actualizar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_actualizar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_actualizar.setText("ACTUALIZAR");
+        btn_actualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_actualizarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 140, 110, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(528, 528, 528)
-                .addComponent(jLabel1)
-                .addContainerGap(615, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel1)
-                .addContainerGap(517, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_actualizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_actualizarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_actualizar;
+    public javax.swing.JButton btn_buscar;
+    public javax.swing.JButton btn_buscar1;
+    public javax.swing.JButton btn_guardar;
+    public javax.swing.JComboBox<String> cbx_TipoMedicamento;
+    public javax.swing.JComboBox<String> cbx_funcionTerapeutica;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    public com.toedter.calendar.JDateChooser jdtc_FechaVencimiento;
+    public javax.swing.JSpinner spn_PrecioUnidad;
+    public javax.swing.JSpinner spn_Stock;
+    public javax.swing.JSpinner spn_StockMinimo;
+    public javax.swing.JTable tbl_RMedicamento;
+    public javax.swing.JTextArea txa_descripcion;
+    public javax.swing.JTextField txt_codigo;
+    public javax.swing.JTextField txt_nombre;
+    public javax.swing.JTextField txt_pricipio_Activo;
     // End of variables declaration//GEN-END:variables
 }
