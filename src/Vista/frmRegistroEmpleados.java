@@ -94,9 +94,9 @@ public class frmRegistroEmpleados extends javax.swing.JInternalFrame {
         jPanel1.add(txt_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 70, 130, 50));
 
         jdtc_FechaNacimiento.setBackground(new java.awt.Color(255, 255, 255));
-        jdtc_FechaNacimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NACIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaNacimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "F. NACIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         jdtc_FechaNacimiento.setForeground(new java.awt.Color(0, 153, 0));
-        jPanel1.add(jdtc_FechaNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 110, 50));
+        jPanel1.add(jdtc_FechaNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 120, 50));
 
         txt_direccion.setBackground(new java.awt.Color(255, 255, 255));
         txt_direccion.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -144,7 +144,7 @@ public class frmRegistroEmpleados extends javax.swing.JInternalFrame {
                 btn_buscarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 80, 80, 40));
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 80, 70, 40));
 
         btn_guardar.setBackground(new java.awt.Color(204, 255, 204));
         btn_guardar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N

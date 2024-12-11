@@ -24,6 +24,7 @@ public class ControladorMenu implements ActionListener{
         vista.jmitemReporteClientes.addActionListener(this);
         vista.jmitemReporteEmpleados.addActionListener(this);
         vista.jmitemReporteMascotas.addActionListener(this);
+        vista.jmitemReporteMedicamentos.addActionListener(this);
         //Metodos extra
         fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
         fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
@@ -98,6 +99,13 @@ public class ControladorMenu implements ActionListener{
             ProcesosM.cerrarFormularios(vista.jdpnContenedor);
             vista.jdpnContenedor.add(Main.frmRPMacotas);
             CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPMacotas);
+        }
+        if(e.getSource() == vista.jmitemReporteMedicamentos){
+            Main.frmRPMedicamentos = new frmReporteMedicamento();
+            Main.ControladorRPMedicamentos = new ControladorReporteMedicamentos(Main.frmRPMedicamentos);
+            ProcesosM.cerrarFormularios(vista.jdpnContenedor);
+            vista.jdpnContenedor.add(Main.frmRPMedicamentos);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmRPMedicamentos);
         }
     }
 }

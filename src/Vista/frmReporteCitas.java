@@ -26,32 +26,177 @@ public class frmReporteCitas extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        txt_dniDueño = new javax.swing.JTextField();
+        jdtc_FechaInicio = new com.toedter.calendar.JDateChooser();
+        cbx_TipoBusqueda = new javax.swing.JComboBox<>();
+        btn_consultar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_RPCitas = new javax.swing.JTable();
+        btn_nuevo = new javax.swing.JButton();
+        txt_CodMascota = new javax.swing.JTextField();
+        cbx_rangoFechas = new javax.swing.JComboBox<>();
+        txt_codigoDoctor = new javax.swing.JTextField();
+        jdtc_FechaFin = new com.toedter.calendar.JDateChooser();
+        btn_exportar = new javax.swing.JButton();
 
-        jLabel1.setText("Reporte citas");
+        setPreferredSize(new java.awt.Dimension(1280, 620));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("REPORTE CITAS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
+
+        txt_dniDueño.setBackground(new java.awt.Color(255, 255, 255));
+        txt_dniDueño.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_dniDueño.setForeground(new java.awt.Color(0, 0, 0));
+        txt_dniDueño.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DNI DUEÑO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txt_dniDueño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_dniDueñoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_dniDueño, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 110, 50));
+
+        jdtc_FechaInicio.setBackground(new java.awt.Color(255, 255, 255));
+        jdtc_FechaInicio.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA INICIO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaInicio.setForeground(new java.awt.Color(0, 153, 0));
+        jPanel1.add(jdtc_FechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 130, 50));
+
+        cbx_TipoBusqueda.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_TipoBusqueda.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_TipoBusqueda.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_TipoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_TipoBusqueda.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TIPO DE BUSQUEDA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_TipoBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 150, 50));
+
+        btn_consultar.setBackground(new java.awt.Color(204, 255, 204));
+        btn_consultar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_consultar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_consultar.setText("CONSULTAR");
+        btn_consultar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_consultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 70, 110, 50));
+
+        tbl_RPCitas.setBackground(new java.awt.Color(255, 255, 255));
+        tbl_RPCitas.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tbl_RPCitas.setForeground(new java.awt.Color(0, 0, 0));
+        tbl_RPCitas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbl_RPCitas);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 1170, 410));
+
+        btn_nuevo.setBackground(new java.awt.Color(204, 255, 255));
+        btn_nuevo.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_nuevo.setForeground(new java.awt.Color(0, 0, 0));
+        btn_nuevo.setText("NUEVO");
+        btn_nuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_nuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_nuevoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 70, 80, 50));
+
+        txt_CodMascota.setBackground(new java.awt.Color(255, 255, 255));
+        txt_CodMascota.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_CodMascota.setForeground(new java.awt.Color(0, 0, 0));
+        txt_CodMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "COD. MASCOTA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_CodMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 120, 50));
+
+        cbx_rangoFechas.setBackground(new java.awt.Color(255, 255, 255));
+        cbx_rangoFechas.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cbx_rangoFechas.setForeground(new java.awt.Color(0, 0, 0));
+        cbx_rangoFechas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbx_rangoFechas.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "RANGO DE FECHAS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(cbx_rangoFechas, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 70, 140, 50));
+
+        txt_codigoDoctor.setBackground(new java.awt.Color(255, 255, 255));
+        txt_codigoDoctor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_codigoDoctor.setForeground(new java.awt.Color(0, 0, 0));
+        txt_codigoDoctor.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "COD. DOCTOR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        txt_codigoDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_codigoDoctorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_codigoDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 110, 50));
+
+        jdtc_FechaFin.setBackground(new java.awt.Color(255, 255, 255));
+        jdtc_FechaFin.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA FIN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaFin.setForeground(new java.awt.Color(0, 153, 0));
+        jPanel1.add(jdtc_FechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 120, 50));
+
+        btn_exportar.setBackground(new java.awt.Color(255, 204, 255));
+        btn_exportar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_exportar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_exportar.setText("EXPORTAR");
+        btn_exportar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_exportar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_exportarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_exportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(672, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(460, 460, 460))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1)
-                .addContainerGap(535, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txt_dniDueñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dniDueñoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dniDueñoActionPerformed
+
+    private void btn_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_nuevoActionPerformed
+
+    private void txt_codigoDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codigoDoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_codigoDoctorActionPerformed
+
+    private void btn_exportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exportarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_exportarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_consultar;
+    public javax.swing.JButton btn_exportar;
+    public javax.swing.JButton btn_nuevo;
+    public javax.swing.JComboBox<String> cbx_TipoBusqueda;
+    public javax.swing.JComboBox<String> cbx_rangoFechas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    public com.toedter.calendar.JDateChooser jdtc_FechaFin;
+    public com.toedter.calendar.JDateChooser jdtc_FechaInicio;
+    public javax.swing.JTable tbl_RPCitas;
+    public javax.swing.JTextField txt_CodMascota;
+    public javax.swing.JTextField txt_codigoDoctor;
+    public javax.swing.JTextField txt_dniDueño;
     // End of variables declaration//GEN-END:variables
 }

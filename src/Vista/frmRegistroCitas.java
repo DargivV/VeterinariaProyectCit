@@ -30,7 +30,7 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txt_dniDueño = new javax.swing.JTextField();
         txt_nombreCliente = new javax.swing.JTextField();
-        jdtc_FechaVencimiento = new com.toedter.calendar.JDateChooser();
+        jdtc_FechaCita = new com.toedter.calendar.JDateChooser();
         cbx_Doctor = new javax.swing.JComboBox<>();
         btn_buscar = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
@@ -76,10 +76,10 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         });
         jPanel1.add(txt_nombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 190, 50));
 
-        jdtc_FechaVencimiento.setBackground(new java.awt.Color(255, 255, 255));
-        jdtc_FechaVencimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA VENCIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jdtc_FechaVencimiento.setForeground(new java.awt.Color(0, 153, 0));
-        jPanel1.add(jdtc_FechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 170, 50));
+        jdtc_FechaCita.setBackground(new java.awt.Color(255, 255, 255));
+        jdtc_FechaCita.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA CITA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jdtc_FechaCita.setForeground(new java.awt.Color(0, 153, 0));
+        jPanel1.add(jdtc_FechaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 170, 50));
 
         cbx_Doctor.setBackground(new java.awt.Color(255, 255, 255));
         cbx_Doctor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -229,7 +229,7 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    public com.toedter.calendar.JDateChooser jdtc_FechaVencimiento;
+    public com.toedter.calendar.JDateChooser jdtc_FechaCita;
     public javax.swing.JTable tbl_RCitas;
     public javax.swing.JTextArea txa_Motivo;
     public javax.swing.JTextField txt_CodMascota;

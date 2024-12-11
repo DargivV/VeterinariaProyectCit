@@ -15,6 +15,7 @@ public class Main {
     public static frmReporteEmpleados frmRPEmpleados;
     public static frmReporteClientes frmRPClientes;
     public static frmReporteMascotas frmRPMacotas;
+    public static frmReporteMedicamento frmRPMedicamentos;
     //Controladores
     public static ControladorRegistrarCliente ControlRClientes;
     public static ControladorRegistrarMascota ControlRMascotas;
@@ -25,6 +26,7 @@ public class Main {
     public static ControladorReporteClientes ControladorRPClientes;
     public static ControladorReporteEmpleados ControladorRPEmpleados;
     public static ControladorReporteMascotas ControladorRPMascotas;
+    public static ControladorReporteMedicamentos ControladorRPMedicamentos;
     //formulario menu y controlador
     public static frmMenu frmMenu;
     public static ControladorMenu ControlMenu;

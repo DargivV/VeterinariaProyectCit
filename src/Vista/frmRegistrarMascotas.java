@@ -130,7 +130,7 @@ public class frmRegistrarMascotas extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tbl_RMascota);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 1170, 290));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 1170, 290));
 
         spn_edad.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         spn_edad.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "EDAD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
