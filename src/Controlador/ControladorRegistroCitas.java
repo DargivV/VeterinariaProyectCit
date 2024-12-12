@@ -13,7 +13,7 @@ public class ControladorRegistroCitas implements ActionListener{
         vista = frmRCitas;
         data = ProcesosCitas.recuperarCitas();
         ProcesosCitas.MostrarEnTabla(frmRCitas, data);
-        ProcesosCitas.ColocarCbxTipoCita(frmRCitas.cbx_tipo_cita);
+        ProcesosCitas.ColocarCbx(frmRCitas.cbx_Doctor, frmRCitas.cbx_tipo_cita);
         ProcesosCitas.Presentacion(frmRCitas);
         
     }

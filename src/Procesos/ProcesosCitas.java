@@ -74,16 +74,27 @@ public class ProcesosCitas implements ConstantesCitas{
         return tipos;
     }
     public static String [] ObtenerNombreDoctores(){
-        String data[][] = ProcesosEmpleados.RecuperarDatosEmpleados();
-        String id[] = new String[data.length];
+        String data[][] = DAO_CONECCION.recuperarDatos(ConsultaDoctores, Constantes.ConstantesEmpleado.numColum);
+        String nombre[] = new String[data.length];
         for(int i = 0; i<data.length;i++){
-            id [i] = data[i][0];
+            nombre [i] = data[i][0]+"/"+data[i][4];
         }
-        return id;
+        return nombre;
     }
-    
+    public static void ColocarCbx(JComboBox<String> cbxDoctores, JComboBox<String> cbxTipoCita){
+        ColocarCbxDoctores(cbxDoctores);
+        ColocarCbxTipoCita(cbxTipoCita);
+    }
+    public static void ColocarCbxDoctores(JComboBox<String> cbxDoctores){
+        modeloComboBox = new DefaultComboBoxModel<>(ObtenerNombreDoctores());
+        cbxDoctores.setModel(modeloComboBox);
+    }
     public static void ColocarCbxTipoCita(JComboBox<String> cbxTipoCita){
         modeloComboBox = new DefaultComboBoxModel<>(ObtenerTiposCita());
         cbxTipoCita.setModel(modeloComboBox);
+    }
+    public static int ObtenerIdDoctor(String idNombre){
+        String datos[]=idNombre.split("/");
+        return Integer.parseInt(datos[0]);
     }
 }
