@@ -9,8 +9,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class ControlConectar implements Parame {
-    
-      public Connection conexion = null;
+    static Connection conexion;
     public Statement st= null;
     public ResultSet rs;
     public PreparedStatement ps;
@@ -19,9 +18,8 @@ public class ControlConectar implements Parame {
     
     
     // Método para establecer la conexión
-  public static Connection conectar() {
-    Connection conexion = null;
-
+    public static Connection conectar() {
+    conexion = null;
     try {
         Class.forName(DRIVER); // Cargar el driver de JDBC
         conexion = DriverManager.getConnection(RUTA, USUARIO, CLAVE);

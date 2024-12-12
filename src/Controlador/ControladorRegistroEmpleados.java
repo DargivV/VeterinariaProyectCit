@@ -14,7 +14,7 @@ public class ControladorRegistroEmpleados implements ActionListener{
         data = ProcesosEmpleados.RecuperarDatosEmpleados();
         ProcesosEmpleados.MostrarEnTabla(frmREmple, data);
         ProcesosEmpleados.Presentacion(frmREmple);
-        
+        ProcesosEmpleados.ColocarModeloCombobox(frmREmple.cbx_TipoEmpleado, frmREmple.cbx_Turno);
     }
     @Override
     public void actionPerformed(ActionEvent e) {

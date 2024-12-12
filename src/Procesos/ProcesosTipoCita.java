@@ -5,11 +5,14 @@ import Constantes.ConstantesTipoCita;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
 import VistaPrincipal.frmRegistrarTipoCita;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
 public class ProcesosTipoCita implements ConstantesTipoCita{
     static DefaultTableModel m ;
+    static DefaultComboBoxModel<String> modeloComboBox; 
     public static void Presentacion(frmRegistrarTipoCita frmTipoCita){
         // Configurar el comportamiento de cierre para solo cerrar esta ventana
         frmTipoCita.setTitle("Registro Tipo Cita");
@@ -25,4 +28,5 @@ public class ProcesosTipoCita implements ConstantesTipoCita{
         m = new DefaultTableModel(data, columnas);
         frm.tbl_RTipoCitas.setModel(m);
     }
+    
 }

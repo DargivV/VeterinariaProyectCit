@@ -14,6 +14,8 @@ public class ControladorRegistrarMascota implements ActionListener{
         data = ProcesosMascota.RecuperarDatosMascota();
         ProcesosMascota.MostrarEnTabla(frmRM, data);
         ProcesosMascota.Presentacion(frmRM);
+        ProcesosMascota.colocarModeloComboBox(frmRM.cbx_especie, frmRM.cbx_sexo);
+        ProcesosMascota.ColocarModeloSpinners(frmRM.spn_Peso,frmRM.spn_edad);
     }
 
     @Override

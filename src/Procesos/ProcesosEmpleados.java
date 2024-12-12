@@ -2,11 +2,16 @@
 package Procesos;
 
 import Constantes.ConstantesEmpleado;
+import static Constantes.ConstantesEmpleado.TipoEmpleados;
+import static Constantes.ConstantesEmpleado.Turnos;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposEmpleado;
+import static Procesos.ProcesosReporteEmpleados.modeloCombobox;
 import Vista.frmRegistroEmpleados;
 import java.sql.*;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 
 public class ProcesosEmpleados implements ConstantesEmpleado{
@@ -54,5 +59,17 @@ public class ProcesosEmpleados implements ConstantesEmpleado{
             System.err.println("Error al recuperar el empleado: " + ex.getMessage());
         }
         return e;
+    }
+    public static void ColocarModeloCombobox(JComboBox<String> cbxTipoE, JComboBox<String> cbxTurno){
+        ColocarModeloComboboxTipoEmpleado(cbxTipoE);
+        ColocarModeloComboboxTurno(cbxTurno);
+    }
+    public static void ColocarModeloComboboxTipoEmpleado(JComboBox<String> cbxTipoE){
+        modeloCombobox = new DefaultComboBoxModel<>(TipoEmpleados);
+        cbxTipoE.setModel(modeloCombobox);
+    }
+    public static void ColocarModeloComboboxTurno(JComboBox<String> cbxTurno){
+        modeloCombobox = new DefaultComboBoxModel<>(Turnos);
+        cbxTurno.setModel(modeloCombobox);
     }
 }

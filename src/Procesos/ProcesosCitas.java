@@ -7,8 +7,11 @@ import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposEmpleado;
 import Modelo.Clases.CamposMascota;
 import Modelo.Clases.CamposTipoCita;
+import static Procesos.ProcesosTipoCita.*;
 import Vista.frmRegistroCitas;
 import java.sql.*;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 
 public class ProcesosCitas implements ConstantesCitas{
@@ -62,5 +65,25 @@ public class ProcesosCitas implements ConstantesCitas{
         }
         return tc;
     }
+    public static String [] ObtenerTiposCita(){
+        String data[][] = ProcesosTipoCita.RecuperarDatosTipoCita();
+        String tipos[] = new String[data.length];
+        for(int i = 0; i<data.length;i++){
+            tipos [i] = data[i][1];
+        }
+        return tipos;
+    }
+    public static String [] ObtenerNombreDoctores(){
+        String data[][] = ProcesosEmpleados.RecuperarDatosEmpleados();
+        String id[] = new String[data.length];
+        for(int i = 0; i<data.length;i++){
+            id [i] = data[i][0];
+        }
+        return id;
+    }
     
+    public static void ColocarCbxTipoCita(JComboBox<String> cbxTipoCita){
+        modeloComboBox = new DefaultComboBoxModel<>(ObtenerTiposCita());
+        cbxTipoCita.setModel(modeloComboBox);
+    }
 }

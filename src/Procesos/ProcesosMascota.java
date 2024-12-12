@@ -10,10 +10,16 @@ import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposMascota;
 import Vista.frmRegistrarMascotas;
 import java.sql.*;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
 
 public class ProcesosMascota implements ConstantesMascotas{
     static DefaultTableModel modelo;
+    static DefaultComboBoxModel<String> ModeloCombobox;
+    static SpinnerNumberModel modeloSpinner;
     public static void Presentacion(frmRegistrarMascotas frmRM){
         frmRM.setTitle("Registro de Mascotas");
         frmRM.setVisible(true);
@@ -73,5 +79,39 @@ public class ProcesosMascota implements ConstantesMascotas{
             e.printStackTrace();
         }
         return mascota;
+    }
+    public static void colocarModeloComboBox(JComboBox<String> ComboEsp, JComboBox<String> ComboSex){
+        ColocarModeloComboboxEspecies(ComboEsp);
+        ColocarModeloComboboxSexos(ComboSex);
+    }
+    
+    public static void ColocarModeloComboboxEspecies(JComboBox<String> ComboEspecies){
+        String [] x = ProcesosTipoEspecie.ObtenerEspecies();
+        ModeloCombobox = new DefaultComboBoxModel(x);
+        ComboEspecies.setModel(ModeloCombobox);
+    }
+    public static void ColocarModeloComboboxSexos(JComboBox<String> Combosexos){
+        ModeloCombobox = new DefaultComboBoxModel(sexos);
+        Combosexos.setModel(ModeloCombobox);
+    }
+    public static void ColocarModeloSpinners(JSpinner spnP, JSpinner spnAge){
+        ColocarModeloSpinnerPeso(spnP);
+        ColocarModeloSpinnerEdad(spnAge);
+    }
+    public static void ColocarModeloSpinnerPeso(JSpinner spnP){
+        modeloSpinner = new SpinnerNumberModel(
+                spnPeso[0], 
+                spnPeso[1], 
+                spnPeso[2], 
+                spnPeso[3]);
+        spnP.setModel(modeloSpinner);
+    }
+    public static void ColocarModeloSpinnerEdad(JSpinner spnAge){
+        modeloSpinner = new SpinnerNumberModel(
+                spnEdad[0], 
+                spnEdad[1], 
+                spnEdad[2], 
+                spnEdad[3]);
+        spnAge.setModel(modeloSpinner);
     }
 }

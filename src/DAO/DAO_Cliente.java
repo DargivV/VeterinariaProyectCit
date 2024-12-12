@@ -6,7 +6,7 @@ import Modelo.Clases.CamposCliente;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
+import java.sql.*;
  
 public class DAO_Cliente extends ControlConectar { 
     
@@ -22,14 +22,13 @@ public class DAO_Cliente extends ControlConectar {
     
     
     
-        public void insertarCliente(CamposCliente client) {
-    
+    public void insertarCliente(CamposCliente client) {
+    Connection conexion = conectar();
     try {
-         
+        
         String sql = "INSERT INTO `clientes` (`DNI`, `Apellido_P`, `Apellido_M`, `nombres`, `telefono`, `correo`, `direccion`, `fecha_Naci`) VALUES (?, ?,?, ?,?, ?,?, ?)";
         ps = conexion.prepareStatement(sql);
-        
-      
+
         ps.setString(1, client.getDNI());  
         ps.setString(2, client.getApellido_P());  
         ps.setString(3, client.getApellido_M() );  
