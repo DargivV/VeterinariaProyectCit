@@ -78,7 +78,22 @@ public class DAO_Cliente extends ControlConectar {
         JOptionPane.showMessageDialog(null, "ERROR: No se puede actualizar el cliente... " + e);
     }
 }
-
     
-      
+    public void eliminarCliente(String DNI) {
+    Connection conexion = conectar();
+    try { 
+        String sql = "DELETE FROM clientes WHERE DNI = ?";
+        ps = conexion.prepareStatement(sql);
+        ps.setString(1, DNI);
+        ps.executeUpdate();
+
+        JOptionPane.showMessageDialog(null, "Cliente eliminado correctamente");
+        conexion.close();
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "ERROR: No se puede eliminar el cliente... " + e);
     }
+    }
+
+}
+        
+    

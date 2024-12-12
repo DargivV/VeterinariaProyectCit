@@ -7,6 +7,7 @@ import Procesos.ProcesosCliente;
 import Vista.frmRegistrarClientes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class ControladorRegistrarCliente implements ActionListener{
     
@@ -46,15 +47,35 @@ public class ControladorRegistrarCliente implements ActionListener{
       //me4todo pa mostrar tabas aqui    
       }  
       
-      
-      
-        
-        
-        
-        
-        
-        
-        
+     if (e.getSource() == vista.btn_eliminar) {
+    try {
+        CamposCliente client = ProcesosCliente.LeerDatos(vista);
+        int respuesta = JOptionPane.showConfirmDialog(
+            null, 
+            "¿Está seguro de que desea eliminar este cliente?", 
+            "Confirmación", 
+            JOptionPane.YES_NO_OPTION
+        );
+        if (respuesta == JOptionPane.YES_OPTION) {
+            DAO_Cliente crud = new DAO_Cliente();
+            crud.eliminarCliente(client.getDNI());
+             JOptionPane.showMessageDialog(null, "Cliente eliminado correctamente.");
+            //   actualizar 
+                    }
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(null, "ERROR: No se pudo eliminar el cliente. " + ex.getMessage());
     }
+    ///////////////////////////////////////////////////////////
+ 
+     
     
 }
+
+    
+    
+    
+    
+}
+
+ }
+ 
