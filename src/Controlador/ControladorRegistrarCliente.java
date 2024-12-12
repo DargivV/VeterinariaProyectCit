@@ -19,6 +19,9 @@ public class ControladorRegistrarCliente implements ActionListener{
         vista = frmRC;
         data = ProcesosCliente.RecuperarDatosClientes();
         vista.btn_registrar.addActionListener(this);
+        vista.btn_Actualisar.addActionListener(this);
+        vista.btn_buscar.addActionListener(this);
+        vista.btn_eliminar.addActionListener(this);
         ProcesosCliente.MostrarEnTabla(frmRC, data);
         ProcesosCliente.Presentacion(frmRC);
         
