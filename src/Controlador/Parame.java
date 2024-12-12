@@ -3,7 +3,7 @@ package Controlador;
 
 interface Parame {
     String DRIVER = "com.mysql.cj.jdbc.Driver";
-    String RUTA = "jdbc:mysql://localhost:3306/veterinariaproyect";
+    String RUTA = "jdbc:mysql://localhost:3306/bdveterinaria";
     String USUARIO ="root";
     String CLAVE = "";
     

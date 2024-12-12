@@ -43,7 +43,7 @@ public class ProcesosEmpleados implements ConstantesEmpleado{
                         rs.getString("telefono"), 
                         rs.getString("correo"), 
                         rs.getString("direccion"), 
-                        rs.getString("fecha_Naci"), 
+                        rs.getDate("fecha_Naci"), 
                         rs.getString("tipo_empleado"), 
                         rs.getString("turno")
                 );
