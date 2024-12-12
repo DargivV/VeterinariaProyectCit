@@ -38,25 +38,47 @@ public class DAO_Cliente extends ControlConectar {
         ps.setString(7, client.getDireccion() );  
         ps.setDate(8, new java.sql.Date(client.getFecha_Naci().getTime()));
 
-        // Ejecutar la consulta
+    
         ps.executeUpdate();
         
-        // Mensaje de éxito
+       
         JOptionPane.showMessageDialog(null, "Datos insertados correctamente");
         conexion.close();
     } catch (Exception e) {
-        // Manejo de errores
+       
         JOptionPane.showMessageDialog(null, "ERROR: No se puede insertar categoría... " + e);
  
     }  
 }
 
+    public void actualizarCliente(CamposCliente client) {
+    Connection conexion = conectar();
+    try {
         
+        String sql = "UPDATE clientes SET Apellido_P = ?, Apellido_M = ?, nombres = ?, telefono = ?, correo = ?, direccion = ?, fecha_Naci = ? WHERE DNI = ?";
+        ps = conexion.prepareStatement(sql);
+
+      
+        ps.setString(1, client.getApellido_P());
+        ps.setString(2, client.getApellido_M());
+        ps.setString(3, client.getNombres());
+        ps.setString(4, client.getTelefono());
+        ps.setString(5, client.getCorreo());
+        ps.setString(6, client.getDireccion());
+        ps.setDate(7, new java.sql.Date(client.getFecha_Naci().getTime()));
+        ps.setString(8, client.getDNI());  //esta vaina es pa idetificaar 
+      
+        ps.executeUpdate();
+
+     
+        JOptionPane.showMessageDialog(null, "Datos actualizados correctamente");
+        conexion.close();
+    } catch (Exception e) {
         
-          
-        
-        
-        
+        JOptionPane.showMessageDialog(null, "ERROR: No se puede actualizar el cliente... " + e);
+    }
+}
+
     
       
     }

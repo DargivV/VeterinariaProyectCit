@@ -41,7 +41,7 @@ public class frmRegistrarClientes extends javax.swing.JInternalFrame {
         btn_eliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_RCliente = new javax.swing.JTable();
-        btn_buscar2 = new javax.swing.JButton();
+        btn_Actualisar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -160,12 +160,12 @@ public class frmRegistrarClientes extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 1170, 360));
 
-        btn_buscar2.setBackground(new java.awt.Color(204, 255, 255));
-        btn_buscar2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        btn_buscar2.setForeground(new java.awt.Color(0, 0, 0));
-        btn_buscar2.setText("ACTUALIZAR");
-        btn_buscar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(btn_buscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 140, 120, 40));
+        btn_Actualisar.setBackground(new java.awt.Color(204, 255, 255));
+        btn_Actualisar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btn_Actualisar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_Actualisar.setText("ACTUALIZAR");
+        btn_Actualisar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(btn_Actualisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 140, 120, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 590));
 
@@ -190,8 +190,8 @@ public class frmRegistrarClientes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_Actualisar;
     public javax.swing.JButton btn_buscar;
-    public javax.swing.JButton btn_buscar2;
     public javax.swing.JButton btn_eliminar;
     public javax.swing.JButton btn_registrar;
     private javax.swing.JLabel jLabel1;

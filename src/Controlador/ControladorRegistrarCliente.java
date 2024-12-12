@@ -32,8 +32,19 @@ public class ControladorRegistrarCliente implements ActionListener{
       client = ProcesosCliente.LeerDatos(vista);
       crud = new DAO_Cliente();
       crud.insertarCliente(client);
-              
+      //me4todo pa mostrar tabas aqui    
       }  
+      
+         
+      if (e.getSource()==vista.btn_Actualisar){
+      client = ProcesosCliente.LeerDatos(vista);
+      crud = new DAO_Cliente();
+      crud.actualizarCliente(client);
+      //me4todo pa mostrar tabas aqui    
+      }  
+      
+      
+      
         
         
         
