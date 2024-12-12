@@ -13,6 +13,7 @@ public class ControladorReporteMedicamentos {
         data = ProcesosMedicamentos.RecuperarDatosMedicamentos();
         ProcesosReporteMedicamento.MostrarEnTabla(frmRPMedicamento, data);
         ProcesosReporteMedicamento.Presentacion(frmRPMedicamento);
+        ProcesosReporteMedicamento.ColocarCbx(frmRPMedicamento.cbx_TipoMedicamento, frmRPMedicamento.cbx_TipoBusqueda);
     }
     
 }

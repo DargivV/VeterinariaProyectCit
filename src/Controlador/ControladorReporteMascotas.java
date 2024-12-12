@@ -13,5 +13,6 @@ public class ControladorReporteMascotas {
         data = ProcesosMascota.RecuperarDatosMascota();
         ProcesosReporteMascota.MostrarEnTabla(frmRPMascota, data);
         ProcesosReporteMascota.Presentacion(frmRPMascota);
+        ProcesosMascota.ColocarModeloComboboxSexos(frmRPMascota.cbx_sexo);
     }
 }

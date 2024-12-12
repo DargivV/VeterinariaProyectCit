@@ -8,5 +8,5 @@ public interface CostantesMedicamentos {
     int numColum = columnas.length;
     String Consulta = "Select * from Medicamentos ";
     String cbxtipo[]= {"Oral","Inyectable","Gel","Topico"};
-    
+    String tipoBusqueda[] = {"Tipo medicamento","Principio Activo","Fecha Vencimiento"};
 }

@@ -17,5 +17,6 @@ public class ControladorReporteClientes implements ConstantesCliente{
         data = ProcesosCliente.RecuperarDatosClientes();
         ProcesosReporteClientes.MostrarEnTbla(frmRPCliente, data);
         ProcesosReporteClientes.Presentacion(frmRPCliente);
+        ProcesosReporteClientes.colocarcbx(frmRPCliente.cbx_TipoBusqueda);
     }
 }

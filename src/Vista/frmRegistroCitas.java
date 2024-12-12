@@ -28,8 +28,6 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txt_dniDueño = new javax.swing.JTextField();
-        txt_nombreCliente = new javax.swing.JTextField();
         jdtc_FechaCita = new com.toedter.calendar.JDateChooser();
         cbx_Doctor = new javax.swing.JComboBox<>();
         btn_buscar = new javax.swing.JButton();
@@ -42,7 +40,6 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         btn_actualizar = new javax.swing.JButton();
         txt_CodMascota = new javax.swing.JTextField();
         cbx_tipo_cita = new javax.swing.JComboBox<>();
-        txt_nombreMascota = new javax.swing.JTextField();
         txt_codigoCita = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -54,39 +51,17 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         jLabel1.setText("REGISTRO CITAS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 20, -1, -1));
 
-        txt_dniDueño.setBackground(new java.awt.Color(255, 255, 255));
-        txt_dniDueño.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txt_dniDueño.setForeground(new java.awt.Color(0, 0, 0));
-        txt_dniDueño.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DNI DUEÑO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        txt_dniDueño.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_dniDueñoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_dniDueño, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 130, 50));
-
-        txt_nombreCliente.setBackground(new java.awt.Color(255, 255, 255));
-        txt_nombreCliente.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txt_nombreCliente.setForeground(new java.awt.Color(0, 0, 0));
-        txt_nombreCliente.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NOMBRE DUEÑO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        txt_nombreCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nombreClienteActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_nombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 190, 50));
-
         jdtc_FechaCita.setBackground(new java.awt.Color(255, 255, 255));
         jdtc_FechaCita.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA CITA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         jdtc_FechaCita.setForeground(new java.awt.Color(0, 153, 0));
-        jPanel1.add(jdtc_FechaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 170, 50));
+        jPanel1.add(jdtc_FechaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 170, 50));
 
         cbx_Doctor.setBackground(new java.awt.Color(255, 255, 255));
         cbx_Doctor.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         cbx_Doctor.setForeground(new java.awt.Color(0, 0, 0));
         cbx_Doctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbx_Doctor.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "DOCTOR", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(cbx_Doctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 170, 50));
+        jPanel1.add(cbx_Doctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 170, 50));
 
         btn_buscar.setBackground(new java.awt.Color(204, 204, 255));
         btn_buscar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -152,25 +127,14 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         txt_CodMascota.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txt_CodMascota.setForeground(new java.awt.Color(0, 0, 0));
         txt_CodMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CODIGO MASCOTA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(txt_CodMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 140, 50));
+        jPanel1.add(txt_CodMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 140, 50));
 
         cbx_tipo_cita.setBackground(new java.awt.Color(255, 255, 255));
         cbx_tipo_cita.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         cbx_tipo_cita.setForeground(new java.awt.Color(0, 0, 0));
         cbx_tipo_cita.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbx_tipo_cita.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "TIPO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(cbx_tipo_cita, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 170, 50));
-
-        txt_nombreMascota.setBackground(new java.awt.Color(255, 255, 255));
-        txt_nombreMascota.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        txt_nombreMascota.setForeground(new java.awt.Color(0, 0, 0));
-        txt_nombreMascota.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "NOMBRE MASCOTA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        txt_nombreMascota.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nombreMascotaActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_nombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 190, 50));
+        jPanel1.add(cbx_tipo_cita, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 170, 50));
 
         txt_codigoCita.setBackground(new java.awt.Color(255, 255, 255));
         txt_codigoCita.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -181,7 +145,7 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
                 txt_codigoCitaActionPerformed(evt);
             }
         });
-        jPanel1.add(txt_codigoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 130, 50));
+        jPanel1.add(txt_codigoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 130, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,21 +165,9 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_actualizarActionPerformed
 
-    private void txt_nombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nombreClienteActionPerformed
-
-    private void txt_nombreMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreMascotaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nombreMascotaActionPerformed
-
     private void txt_codigoCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_codigoCitaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_codigoCitaActionPerformed
-
-    private void txt_dniDueñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_dniDueñoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dniDueñoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -234,8 +186,5 @@ public class frmRegistroCitas extends javax.swing.JInternalFrame {
     public javax.swing.JTextArea txa_Motivo;
     public javax.swing.JTextField txt_CodMascota;
     public javax.swing.JTextField txt_codigoCita;
-    public javax.swing.JTextField txt_dniDueño;
-    public javax.swing.JTextField txt_nombreCliente;
-    public javax.swing.JTextField txt_nombreMascota;
     // End of variables declaration//GEN-END:variables
 }
