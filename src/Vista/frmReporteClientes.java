@@ -37,7 +37,6 @@ public class frmReporteClientes extends javax.swing.JInternalFrame {
         txt_nombre = new javax.swing.JTextField();
         txt_apellidoP = new javax.swing.JTextField();
         txt_apellidoM = new javax.swing.JTextField();
-        btn_exportar = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,18 +113,6 @@ public class frmReporteClientes extends javax.swing.JInternalFrame {
         txt_apellidoM.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "APELLIDO MATERNO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.add(txt_apellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 150, 50));
 
-        btn_exportar.setBackground(new java.awt.Color(255, 204, 255));
-        btn_exportar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        btn_exportar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_exportar.setText("EXPORTAR");
-        btn_exportar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_exportar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_exportarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_exportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 70, 100, 50));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -144,14 +131,9 @@ public class frmReporteClientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_nuevoActionPerformed
 
-    private void btn_exportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exportarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_exportarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_consultar;
-    public javax.swing.JButton btn_exportar;
     public javax.swing.JButton btn_nuevo;
     public javax.swing.JComboBox<String> cbx_TipoBusqueda;
     private javax.swing.JLabel jLabel1;

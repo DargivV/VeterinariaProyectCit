@@ -39,7 +39,6 @@ public class frmReporteEmpleados extends javax.swing.JInternalFrame {
         tbl_RPEmpleados = new javax.swing.JTable();
         btn_consultar = new javax.swing.JButton();
         btn_nuevo = new javax.swing.JButton();
-        btn_exportar = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,18 +134,6 @@ public class frmReporteEmpleados extends javax.swing.JInternalFrame {
         });
         jPanel1.add(btn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, 80, 30));
 
-        btn_exportar.setBackground(new java.awt.Color(255, 204, 255));
-        btn_exportar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        btn_exportar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_exportar.setText("EXPORTAR");
-        btn_exportar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_exportar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_exportarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_exportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 20, 100, 30));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,10 +152,6 @@ public class frmReporteEmpleados extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_nuevoActionPerformed
 
-    private void btn_exportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exportarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_exportarActionPerformed
-
     private void cbx_TipoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_TipoEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbx_TipoEmpleadoActionPerformed
@@ -176,7 +159,6 @@ public class frmReporteEmpleados extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_consultar;
-    public javax.swing.JButton btn_exportar;
     public javax.swing.JButton btn_nuevo;
     public javax.swing.JComboBox<String> cbx_TipoBusqueda;
     public javax.swing.JComboBox<String> cbx_TipoEmpleado;

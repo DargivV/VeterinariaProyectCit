@@ -34,7 +34,6 @@ public class frmReporteMedicamento extends javax.swing.JInternalFrame {
         cbx_TipoBusqueda = new javax.swing.JComboBox<>();
         btn_consultar = new javax.swing.JButton();
         btn_nuevo = new javax.swing.JButton();
-        btn_exportar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_RPMedicamento = new javax.swing.JTable();
 
@@ -92,18 +91,6 @@ public class frmReporteMedicamento extends javax.swing.JInternalFrame {
         });
         jPanel1.add(btn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 80, 80, 40));
 
-        btn_exportar.setBackground(new java.awt.Color(255, 204, 255));
-        btn_exportar.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        btn_exportar.setForeground(new java.awt.Color(0, 0, 0));
-        btn_exportar.setText("EXPORTAR");
-        btn_exportar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_exportar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_exportarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_exportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 80, 100, 40));
-
         tbl_RPMedicamento.setBackground(new java.awt.Color(255, 255, 255));
         tbl_RPMedicamento.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tbl_RPMedicamento.setForeground(new java.awt.Color(0, 0, 0));
@@ -140,14 +127,9 @@ public class frmReporteMedicamento extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_nuevoActionPerformed
 
-    private void btn_exportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exportarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_exportarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_consultar;
-    public javax.swing.JButton btn_exportar;
     public javax.swing.JButton btn_nuevo;
     public javax.swing.JComboBox<String> cbx_TipoBusqueda;
     public javax.swing.JComboBox<String> cbx_TipoMedicamento;
