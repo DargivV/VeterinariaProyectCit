@@ -16,7 +16,20 @@ public class CamposCliente {
 
     public CamposCliente() {
     }
-    
+    public Object[] RegistroCliente(int numeracion) {
+    Object[] fila = {
+        numeracion, 
+        this.DNI, 
+        this.Apellido_P, 
+        this.Apellido_M, 
+        this.nombres, 
+        this.telefono, 
+        this.correo, 
+        this.direccion, 
+        this.fecha_Naci
+    };
+    return fila;
+}
     public CamposCliente(String DNI, String Apellido_P, String Apellido_M, String nombres, String telefono, String correo, String direccion, Date fecha_Naci) {
         this.DNI = DNI;
         this.Apellido_P = Apellido_P;

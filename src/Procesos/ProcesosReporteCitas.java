@@ -6,6 +6,7 @@ import Constantes.ConstantesCitas;
 import Vista.frmReporteCitas;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ProcesosReporteCitas implements ConstantesCitas{
@@ -32,5 +33,5 @@ public class ProcesosReporteCitas implements ConstantesCitas{
         combomodel = new DefaultComboBoxModel<>(rango);
         cbxf.setModel(combomodel);
     }
-    
+   
 }

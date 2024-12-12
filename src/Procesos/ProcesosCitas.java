@@ -4,6 +4,7 @@ package Procesos;
 import Constantes.ConstantesCitas;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
+import DTO.CamposCita;
 import DTO.CamposEmpleado;
 import DTO.CamposMascota;
 import DTO.CamposTipoCita;
@@ -97,4 +98,44 @@ public class ProcesosCitas implements ConstantesCitas{
         String datos[]=idNombre.split("/");
         return Integer.parseInt(datos[0]);
     }
+    
+    
+    /////////////////////////////////
+public static CamposCita LeerDatos(frmRegistroCitas fl) {
+    CamposCita cita = new CamposCita();
+
+    
+    try {
+        // Leer y validar datos del formulario
+        String codCita = fl.txt_codigoCita.getText().trim();
+        if (codCita.isEmpty()) throw new IllegalArgumentException("El código de cita no puede estar vacío.");
+        cita.setCodCita(Integer.parseInt(codCita));
+
+        String idMascota = fl.txt_CodMascota.getText().trim();
+        if (idMascota.isEmpty()) throw new IllegalArgumentException("El código de mascota no puede estar vacío.");
+        cita.setIdMascota(Integer.parseInt(idMascota));
+
+        String doctorSeleccionado = (String) fl.cbx_Doctor.getSelectedItem();
+        if (doctorSeleccionado == null || doctorSeleccionado.isEmpty()) throw new IllegalArgumentException("Debe seleccionar un doctor.");
+        cita.setIdDoctor(ObtenerIdDoctor(doctorSeleccionado));
+
+        String tipoCitaSeleccionado = (String) fl.cbx_tipo_cita.getSelectedItem();
+        if (tipoCitaSeleccionado == null || tipoCitaSeleccionado.isEmpty()) throw new IllegalArgumentException("Debe seleccionar un tipo de cita.");
+        cita.setTipoCita(Integer.parseInt(tipoCitaSeleccionado)); // Suponiendo que tipoCita es un ID
+
+        if (fl.jdtc_FechaCita.getDate() == null) throw new IllegalArgumentException("Debe seleccionar una fecha.");
+        cita.setFecha(fl.jdtc_FechaCita.getDate());
+
+        String motivo = fl.txa_Motivo.getText().trim();
+        if (motivo.isEmpty()) throw new IllegalArgumentException("Debe ingresar un motivo.");
+        cita.setMotivo(motivo);
+
+    } catch (NumberFormatException e) {
+        throw new IllegalArgumentException("Formato inválido en algún campo numérico.", e);
+    }
+
+    return cita;
+}
+    
+    
 }
