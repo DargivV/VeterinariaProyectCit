@@ -4,7 +4,7 @@ package Procesos;
 import Constantes.ConstantesCliente;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
-import Modelo.Clases.CamposCliente;
+import DTO.CamposCliente;
 import Vista.frmRegistrarClientes;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;

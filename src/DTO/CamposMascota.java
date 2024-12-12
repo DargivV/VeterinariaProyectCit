@@ -1,4 +1,4 @@
-package Modelo.Clases;
+package DTO;
 
 public class CamposMascota {
 

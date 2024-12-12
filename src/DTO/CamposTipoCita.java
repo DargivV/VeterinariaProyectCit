@@ -1,5 +1,5 @@
 
-package Modelo.Clases;
+package DTO;
 
 public class CamposTipoCita {
     private int id_Tipo;

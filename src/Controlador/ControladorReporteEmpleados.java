@@ -13,5 +13,7 @@ public class ControladorReporteEmpleados {
         data = ProcesosEmpleados.RecuperarDatosEmpleados();
         ProcesosReporteEmpleados.Presentacion(frmRPEmpleado);
         ProcesosReporteEmpleados.MostrarEnTabla(vista,data);
+        ProcesosReporteEmpleados.colocarcbx(frmRPEmpleado.cbx_TipoEmpleado, frmRPEmpleado.cbx_Turno,frmRPEmpleado.cbx_TipoBusqueda);
+        
     }
 }

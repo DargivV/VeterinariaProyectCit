@@ -16,4 +16,5 @@ public class ProcesosReporteMedicamento implements CostantesMedicamentos{
         modelo = new DefaultTableModel(data, columnas);
         frm.tbl_RPMedicamento.setModel(modelo);
     }
+    
 }

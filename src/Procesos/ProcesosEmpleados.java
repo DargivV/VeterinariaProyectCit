@@ -6,7 +6,7 @@ import static Constantes.ConstantesEmpleado.TipoEmpleados;
 import static Constantes.ConstantesEmpleado.Turnos;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
-import Modelo.Clases.CamposEmpleado;
+import DTO.CamposEmpleado;
 import static Procesos.ProcesosReporteEmpleados.modeloCombobox;
 import Vista.frmRegistroEmpleados;
 import java.sql.*;

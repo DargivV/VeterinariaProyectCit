@@ -14,9 +14,8 @@ public class ControladorRegistroMedicamentos implements ActionListener{
         data = ProcesosMedicamentos.RecuperarDatosMedicamentos();
         ProcesosMedicamentos.mostrarEnTabla(frmRMedi, data);
         ProcesosMedicamentos.Presentacion(frmRMedi);
-        
+        ProcesosMedicamentos.colocarTipoMedicamento(frmRMedi.cbx_TipoMedicamento);
     }
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         

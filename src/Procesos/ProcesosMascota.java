@@ -4,7 +4,7 @@ package Procesos;
 import Constantes.ConstantesMascotas;
 import Controlador.ControlConectar;
 import DAO.DAO_CONECCION;
-import Modelo.Clases.CamposMascota;
+import DTO.CamposMascota;
 import Vista.frmRegistrarMascotas;
 import java.sql.*;
 import javax.swing.DefaultComboBoxModel;

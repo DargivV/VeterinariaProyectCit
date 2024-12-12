@@ -19,6 +19,12 @@ public class ProcesosReporteEmpleados implements ConstantesEmpleado{
         modelo = new DefaultTableModel(data, columnas);
         frm.tbl_RPEmpleados.setModel(modelo);
     }
-    
-    
+    public static void colocarcbx(JComboBox<String> tipoE, JComboBox<String> turno, JComboBox<String> tipoBus){
+        ProcesosEmpleados.ColocarModeloCombobox(tipoE, turno);
+        colocarCbxTipoBus(tipoBus);
+    }
+    public static void colocarCbxTipoBus(JComboBox<String> tipoB){
+        modeloCombobox = new DefaultComboBoxModel<>(tipoBusqueda);
+        tipoB.setModel(modeloCombobox);
+    }
 }

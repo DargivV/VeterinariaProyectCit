@@ -2,7 +2,7 @@
 package DAO;
 
 import Controlador.ControlConectar;
-import Modelo.Clases.CamposCliente;
+import DTO.CamposCliente;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;

@@ -7,4 +7,6 @@ public interface CostantesMedicamentos {
                       "fecha_vencimiento", "precio_unidad", "descripcion"};
     int numColum = columnas.length;
     String Consulta = "Select * from Medicamentos ";
+    String cbxtipo[]= {"Oral","Inyectable","Gel","Topico"};
+    
 }

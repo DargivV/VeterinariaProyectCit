@@ -15,7 +15,6 @@ public class ControladorRegistroCitas implements ActionListener{
         ProcesosCitas.MostrarEnTabla(frmRCitas, data);
         ProcesosCitas.ColocarCbx(frmRCitas.cbx_Doctor, frmRCitas.cbx_tipo_cita);
         ProcesosCitas.Presentacion(frmRCitas);
-        
     }
     @Override
     public void actionPerformed(ActionEvent e) {

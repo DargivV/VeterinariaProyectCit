@@ -1,4 +1,4 @@
-package Modelo.Clases;
+package DTO;
 public class CamposMedicamentos {
     private int cod_Medicamento;
     private String nombre;

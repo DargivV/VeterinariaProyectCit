@@ -2,7 +2,7 @@
 package Controlador;
 
 import DAO.DAO_Cliente;
-import Modelo.Clases.CamposCliente;
+import DTO.CamposCliente;
 import Procesos.ProcesosCliente;
 import Vista.frmRegistrarClientes;
 import java.awt.event.ActionEvent;

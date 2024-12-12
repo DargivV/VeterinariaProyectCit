@@ -7,4 +7,5 @@ public interface ConstantesEmpleado {
     String Consulta = "Select * from Empleados ";
     String TipoEmpleados[] = {"Veterinario","Asistente","Administrador","Recepcionista"};
     String Turnos[] = {"Mañana","Tarde","Noche"};
+    String tipoBusqueda[]  = {"Nombre","Apellido Paterno","Apellido Materno","Fecha Nacimiento", "Tipo Empleado","Turno"};
 }

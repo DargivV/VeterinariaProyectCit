@@ -15,9 +15,9 @@ public class ControladorReporteCitas implements ActionListener{
         data = ProcesosCitas.recuperarCitas();
         ProcesosReporteCitas.MostrarEnTabla(frmRPCita, data);
         ProcesosReporteCitas.Presentacion(frmRPCita);
-        
+        ProcesosReporteCitas.colocartipobUSQUEDA(frmRPCita.cbx_TipoBusqueda);
+        ProcesosReporteCitas.colocarModeloCBX(frmRPCita.cbx_TipoBusqueda, frmRPCita.cbx_rangoFechas);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
     }

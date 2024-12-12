@@ -6,4 +6,6 @@ public interface ConstantesCitas {
     int numColum = columnas.length;
     String Consulta = "Select * from Citas ";
     String ConsultaDoctores = "Select*from empleados where tipo_empleado = 'Veterinario'";
+    String cbxTipoBusqueda[] = {"Codigo Doctor","Codigo Mascota", "DNI Dueño", "Fecha"};
+    String rango[] = {"Inicio","Inicio/Fin"};
 }
