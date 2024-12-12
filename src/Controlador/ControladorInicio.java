@@ -3,6 +3,7 @@ package Controlador;
 
 import VistaPrincipal.frmInicio;
 import VistaPrincipal.frmRegistrarEspecie;
+import VistaPrincipal.frmRegistrarTipoCita;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -23,10 +24,11 @@ public class ControladorInicio implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vista.btn_registrarEspecie){
             frmRegistrarEspecie frmEspecie = new frmRegistrarEspecie();
-            // Configurar el comportamiento de cierre para solo cerrar esta ventana
-            frmEspecie.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            frmEspecie.setLocationRelativeTo(null);
-            frmEspecie.setVisible(true);
+            ControladorRegistrarTipoEspecie ControlEspecie = new ControladorRegistrarTipoEspecie(frmEspecie);
+        }
+        if(e.getSource() == vista.btn_registrarTipoCita){
+            frmRegistrarTipoCita frmTipoCita = new frmRegistrarTipoCita();
+            ControladorTipoCita ControlTipoCita = new ControladorTipoCita(frmTipoCita);
         }
     }
     

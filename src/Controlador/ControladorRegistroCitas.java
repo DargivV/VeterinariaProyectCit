@@ -1,20 +1,21 @@
 
 package Controlador;
 
+import Procesos.ProcesosCitas;
 import Vista.frmRegistroCitas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorRegistroCitas implements ActionListener{
     frmRegistroCitas vista;
-
+    static String data [][];
     public ControladorRegistroCitas(frmRegistroCitas frmRCitas) {
         vista = frmRCitas;
-        frmRCitas.setTitle("Registro de Mascotas");
-        frmRCitas.setVisible(true);
-        frmRCitas.setSize(1280, 620);
+        data = ProcesosCitas.recuperarCitas();
+        ProcesosCitas.MostrarEnTabla(frmRCitas, data);
+        ProcesosCitas.Presentacion(frmRCitas);
+        
     }
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         

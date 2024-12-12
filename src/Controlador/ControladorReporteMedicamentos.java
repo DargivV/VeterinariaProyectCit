@@ -1,16 +1,18 @@
 
 package Controlador;
 
+import Procesos.ProcesosMedicamentos;
+import Procesos.ProcesosReporteMedicamento;
 import Vista.frmReporteMedicamento;
 
 public class ControladorReporteMedicamentos {
     frmReporteMedicamento vista;
-
+    static String data [][];
     public ControladorReporteMedicamentos(frmReporteMedicamento frmRPMedicamento) {
         vista = frmRPMedicamento;
-        frmRPMedicamento.setTitle("Reporte Clientes");
-        frmRPMedicamento.setVisible(true);
-        frmRPMedicamento.setSize(1280, 620);
+        data = ProcesosMedicamentos.RecuperarDatosMedicamentos();
+        ProcesosReporteMedicamento.MostrarEnTabla(frmRPMedicamento, data);
+        ProcesosReporteMedicamento.Presentacion(frmRPMedicamento);
     }
     
 }

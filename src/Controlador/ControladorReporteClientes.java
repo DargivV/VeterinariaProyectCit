@@ -4,15 +4,18 @@
  */
 package Controlador;
 
+import Constantes.ConstantesCliente;
+import Procesos.ProcesosCliente;
+import Procesos.ProcesosReporteClientes;
 import Vista.frmReporteClientes;
 
-public class ControladorReporteClientes {
+public class ControladorReporteClientes implements ConstantesCliente{
     frmReporteClientes vista;
-
+    static String data[][];
     public ControladorReporteClientes(frmReporteClientes frmRPCliente) {
         vista = frmRPCliente;
-        frmRPCliente.setTitle("Reporte Clientes");
-        frmRPCliente.setVisible(true);
-        frmRPCliente.setSize(1280, 620);
+        data = ProcesosCliente.RecuperarDatosClientes();
+        ProcesosReporteClientes.MostrarEnTbla(frmRPCliente, data);
+        ProcesosReporteClientes.Presentacion(frmRPCliente);
     }
 }

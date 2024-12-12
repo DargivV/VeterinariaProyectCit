@@ -15,6 +15,7 @@ public class ControladorMenu implements ActionListener{
     public ControladorMenu(frmMenu fm) {
         vista = fm;
         vista.jmitemInicio.addActionListener(this);
+        ProcesosM.ColocarInicio(vista.jdpnContenedor, Main.frmI, Main.ControladorI);
         //Items Menu para Mascotas
         vista.jmitemRegistrarCliente.addActionListener(this);
         vista.jmitemRegistrarMascota.addActionListener(this);
@@ -38,11 +39,8 @@ public class ControladorMenu implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == vista.jmitemInicio){
-            Main.frmI = new frmInicio();
-            Main.ControladorI = new ControladorInicio(Main.frmI);
             ProcesosM.cerrarFormularios(vista.jdpnContenedor);
-            vista.jdpnContenedor.add(Main.frmI);
-            CentrarForma.CPanel(vista.jdpnContenedor, Main.frmI);
+            ProcesosM.ColocarInicio(vista.jdpnContenedor, Main.frmI, Main.ControladorI);
         }
         //Menu mascotas
         if(e.getSource() == vista.jmitemRegistrarCliente){

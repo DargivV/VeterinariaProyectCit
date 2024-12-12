@@ -8,12 +8,12 @@ package VistaPrincipal;
  *
  * @author Acer
  */
-public class frmRegistrarEspecie extends javax.swing.JFrame {
+public class frmRegistrarTipoCita extends javax.swing.JFrame {
 
     /**
-     * Creates new form frmRegistrarEspecie
+     * Creates new form frmRegistrarTipoCita
      */
-    public frmRegistrarEspecie() {
+    public frmRegistrarTipoCita() {
         initComponents();
     }
 
@@ -28,7 +28,7 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_REspecies = new javax.swing.JTable();
+        tbl_RTipoCitas = new javax.swing.JTable();
         txt_nombreEspecie = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         txt_IdEspecie = new javax.swing.JTextField();
@@ -38,17 +38,15 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
         btn_Consultar2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(0, 0));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(259, 479));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tbl_REspecies.setBackground(new java.awt.Color(255, 255, 255));
-        tbl_REspecies.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        tbl_REspecies.setForeground(new java.awt.Color(0, 0, 0));
-        tbl_REspecies.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_RTipoCitas.setBackground(new java.awt.Color(255, 255, 255));
+        tbl_RTipoCitas.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tbl_RTipoCitas.setForeground(new java.awt.Color(0, 0, 0));
+        tbl_RTipoCitas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -59,7 +57,7 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tbl_REspecies);
+        jScrollPane1.setViewportView(tbl_RTipoCitas);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 220, 230));
 
@@ -76,8 +74,8 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Nueva Especie");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+        jLabel1.setText("Nuevo Tipo de Cita");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         txt_IdEspecie.setBackground(new java.awt.Color(255, 255, 255));
         txt_IdEspecie.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -133,7 +131,20 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
         });
         jPanel1.add(btn_Consultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 220, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 259, 479));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -175,20 +186,20 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmRegistrarEspecie.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistrarTipoCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmRegistrarEspecie.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistrarTipoCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmRegistrarEspecie.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistrarTipoCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmRegistrarEspecie.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmRegistrarTipoCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmRegistrarEspecie().setVisible(true);
+                new frmRegistrarTipoCita().setVisible(true);
             }
         });
     }
@@ -201,7 +212,7 @@ public class frmRegistrarEspecie extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable tbl_REspecies;
+    public javax.swing.JTable tbl_RTipoCitas;
     public javax.swing.JTextField txt_IdEspecie;
     public javax.swing.JTextField txt_nombreEspecie;
     // End of variables declaration//GEN-END:variables

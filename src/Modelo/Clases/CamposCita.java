@@ -6,7 +6,7 @@ public class CamposCita {
     private int cod_cita;
     private int id_mascota;
     private int id_doctor;
-    private int tipo;
+    private int tipo_cita;
     private Date fecha;
     private String motivo;
     // Constructor vacío
@@ -16,7 +16,7 @@ public class CamposCita {
         this.cod_cita = cod_cita;
         this.id_mascota = id_mascota;
         this.id_doctor = id_doctor;
-        this.tipo = tipo;
+        this.tipo_cita = tipo;
         this.fecha = fecha;
         this.motivo = motivo;
     }
@@ -34,7 +34,7 @@ public class CamposCita {
     }
 
     public int getTipo() {
-        return tipo;
+        return tipo_cita;
     }
 
     public Date getFecha() {

@@ -1,18 +1,20 @@
 
 package Controlador;
 
+import Procesos.ProcesosMedicamentos;
 import Vista.frmRegistroMedicamentos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorRegistroMedicamentos implements ActionListener{
     frmRegistroMedicamentos vista;
-
+    static String data[][];
     public ControladorRegistroMedicamentos(frmRegistroMedicamentos frmRMedi) {
         vista = frmRMedi;
-        frmRMedi.setTitle("Registro Medicamentos");
-        frmRMedi.setVisible(true);
-        frmRMedi.setSize(1280, 620);
+        data = ProcesosMedicamentos.RecuperarDatosMedicamentos();
+        ProcesosMedicamentos.mostrarEnTabla(frmRMedi, data);
+        ProcesosMedicamentos.Presentacion(frmRMedi);
+        
     }
     
     @Override

@@ -1,18 +1,23 @@
 package Modelo.Clases;
+
 public class CamposMascota {
+
     private int cod_Mascota;
     private String nombre;
-    private String especie;
+    private int tipo_especie;
     private String raza;
     private int edad;
     private String sexo;
     private double peso;
     private int dni_dueño;
 
-    public CamposMascota(int cod_Mascota, String nombre, String especie, String raza, int edad, String sexo, double peso, int dni_dueño) {
+    public CamposMascota() {
+    }
+    
+    public CamposMascota(int cod_Mascota, String nombre, int tipo_especie, String raza, int edad, String sexo, double peso, int dni_dueño) {
         this.cod_Mascota = cod_Mascota;
         this.nombre = nombre;
-        this.especie = especie;
+        this.tipo_especie = tipo_especie;
         this.raza = raza;
         this.edad = edad;
         this.sexo = sexo;
@@ -28,8 +33,8 @@ public class CamposMascota {
         return nombre;
     }
 
-    public String getEspecie() {
-        return especie;
+    public int getTipoEspecie() {
+        return tipo_especie;
     }
 
     public String getRaza() {
@@ -43,7 +48,6 @@ public class CamposMascota {
     public String getSexo() {
         return sexo;
     }
-
     public double getPeso() {
         return peso;
     }
@@ -51,5 +55,37 @@ public class CamposMascota {
     public int getDni_dueño() {
         return dni_dueño;
     }
-    
+
+    public void setCod_Mascota(int cod_Mascota) {
+        this.cod_Mascota = cod_Mascota;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTipo_especie(int tipo_especie) {
+        this.tipo_especie = tipo_especie;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void setDni_dueño(int dni_dueño) {
+        this.dni_dueño = dni_dueño;
+    }
+
 }

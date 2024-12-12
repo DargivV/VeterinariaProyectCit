@@ -1,17 +1,19 @@
 
 package Controlador;
 
+import Procesos.ProcesosMascota;
 import Vista.frmRegistrarMascotas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorRegistrarMascota implements ActionListener{
     frmRegistrarMascotas vista;
+    static String data[][];
     public ControladorRegistrarMascota(frmRegistrarMascotas frmRM) {
         vista = frmRM;
-        frmRM.setTitle("Registro de Mascotas");
-        frmRM.setVisible(true);
-        frmRM.setSize(1280, 620);
+        data = ProcesosMascota.RecuperarDatosMascota();
+        ProcesosMascota.MostrarEnTabla(frmRM, data);
+        ProcesosMascota.Presentacion(frmRM);
     }
 
     @Override

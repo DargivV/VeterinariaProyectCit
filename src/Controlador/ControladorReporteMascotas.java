@@ -1,15 +1,16 @@
 
 package Controlador;
 
+import Procesos.ProcesosMascota;
+import Procesos.ProcesosReporteMascota;
 import Vista.frmReporteMascotas;
 
 public class ControladorReporteMascotas {
     frmReporteMascotas vista;
-
+    static String data [][];
     public ControladorReporteMascotas(frmReporteMascotas frmRPMascota) {
         vista = frmRPMascota;
-        frmRPMascota.setTitle("Reporte Mascotas");
-        frmRPMascota.setVisible(true);
-        frmRPMascota.setSize(1280, 620);
+        data = ProcesosMascota.RecuperarDatosMascota();
+        ProcesosReporteMascota.MostrarEnTabla(frmRPMascota, data);
     }
 }

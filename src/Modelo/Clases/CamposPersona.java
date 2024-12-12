@@ -10,6 +10,10 @@ public class CamposPersona {
     private String direccion;
     private String fecha_Naci;
     //Constructor
+
+    public CamposPersona() {
+    }
+    
     public CamposPersona(String DNI, String Apellido_P, String Apellido_M, String nombres, String telefono, String correo, String direccion, String fecha_Naci) {
         this.DNI = DNI;
         this.Apellido_P = Apellido_P;

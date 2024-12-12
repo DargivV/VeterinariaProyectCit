@@ -1,9 +1,8 @@
 package Principal;
-
+import java.sql.Connection;
 import Controlador.*;
 import VistaPrincipal.*;
 import Vista.*;
-
 public class Main {
     //Formulario Inicio
     public static frmInicio frmI;
@@ -36,5 +35,6 @@ public class Main {
     public static void main(String[]args){
         frmMenu = new frmMenu();
         ControlMenu = new ControladorMenu(frmMenu);
+        Connection conn = ControlConectar.conectar();
     }
 }

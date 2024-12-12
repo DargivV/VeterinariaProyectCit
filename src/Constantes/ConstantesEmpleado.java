@@ -1,0 +1,8 @@
+
+package Constantes;
+
+public interface ConstantesEmpleado {
+    String[] columnas = {"cod", "DNI", "Apellido_P", "Apellido_M", "nombres", "telefono", "correo", "direccion", "fecha_Naci", "tipo", "turno"};
+    int numColum = columnas.length;
+    String Consulta = "Select * from Empleados ";
+}
