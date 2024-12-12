@@ -10,11 +10,11 @@ public class CamposMascota {
     private String sexo;
     private double peso;
     private int dni_dueño;
-
+    private String descripcion;
     public CamposMascota() {
     }
-    
-    public CamposMascota(int cod_Mascota, String nombre, int tipo_especie, String raza, int edad, String sexo, double peso, int dni_dueño) {
+
+    public CamposMascota(int cod_Mascota, String nombre, int tipo_especie, String raza, int edad, String sexo, double peso, int dni_dueño, String descripcion) {
         this.cod_Mascota = cod_Mascota;
         this.nombre = nombre;
         this.tipo_especie = tipo_especie;
@@ -23,7 +23,22 @@ public class CamposMascota {
         this.sexo = sexo;
         this.peso = peso;
         this.dni_dueño = dni_dueño;
+        this.descripcion = descripcion;
     }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getTipo_especie() {
+        return tipo_especie;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+    
+    
 
     public int getCod_Mascota() {
         return cod_Mascota;

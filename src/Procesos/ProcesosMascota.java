@@ -64,6 +64,7 @@ public class ProcesosMascota implements ConstantesMascotas{
                 mascota.setRaza(rs.getString("raza"));
                 mascota.setSexo(rs.getString("sexo"));
                 mascota.setTipo_especie(rs.getInt("tipo_especie"));
+                mascota.setDescripcion(rs.getString("descripcion"));
             }
             conexion.close();
             return mascota;

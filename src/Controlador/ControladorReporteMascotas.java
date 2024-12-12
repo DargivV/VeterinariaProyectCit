@@ -12,5 +12,6 @@ public class ControladorReporteMascotas {
         vista = frmRPMascota;
         data = ProcesosMascota.RecuperarDatosMascota();
         ProcesosReporteMascota.MostrarEnTabla(frmRPMascota, data);
+        ProcesosReporteMascota.Presentacion(frmRPMascota);
     }
 }
