@@ -3,6 +3,7 @@ package Procesos;
 
 import Constantes.ConstantesEmpleado;
 import Controlador.ControlConectar;
+import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposEmpleado;
 import Vista.frmRegistroEmpleados;
 import java.sql.*;
@@ -16,7 +17,7 @@ public class ProcesosEmpleados implements ConstantesEmpleado{
         frmREmple.setSize(1280, 620);
     }
     public static String[][] RecuperarDatosEmpleados(){
-        String[][] datos = ControlConectar.recuperarDatos(Consulta, numColum);
+        String[][] datos = DAO_CONECCION.recuperarDatos(Consulta, numColum);
         return datos;
     }
     public static void MostrarEnTabla(frmRegistroEmpleados frm, String data[][]){

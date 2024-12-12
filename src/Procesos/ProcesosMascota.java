@@ -6,6 +6,7 @@ package Procesos;
 
 import Constantes.ConstantesMascotas;
 import Controlador.ControlConectar;
+import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposMascota;
 import Vista.frmRegistrarMascotas;
 import java.sql.*;
@@ -19,7 +20,7 @@ public class ProcesosMascota implements ConstantesMascotas{
         frmRM.setSize(1280, 620);
     }
     public static String [][]RecuperarDatosMascota(){
-        String data[][] = ControlConectar.recuperarDatos(Consulta, numColum);
+        String data[][] = DAO_CONECCION.recuperarDatos(Consulta, numColum);
         for(int i =0; i<data.length; i++)
             data[i][2] = ObtenerEspecie(Integer.parseInt(data[i][2]));
         return data;

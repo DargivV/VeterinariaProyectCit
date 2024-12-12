@@ -3,6 +3,7 @@ package Procesos;
 
 import Constantes.ConstantesCitas;
 import Controlador.ControlConectar;
+import DAO.DAO_CONECCION;
 import Modelo.Clases.CamposEmpleado;
 import Modelo.Clases.CamposMascota;
 import Modelo.Clases.CamposTipoCita;
@@ -20,7 +21,7 @@ public class ProcesosCitas implements ConstantesCitas{
         frmRCitas.setSize(1280, 620);
     }
     public static String [][] recuperarCitas(){
-        String data[][] = ControlConectar.recuperarDatos(Consulta, numColum);
+        String data[][] = DAO_CONECCION.recuperarDatos(Consulta, numColum);
         for(int i =0; i<data.length; i++){
             data[i][1] = data[i][1]+" - "+RecuperarNombreMascota(Integer.parseInt(data[i][1]));
             data[i][2] = data[i][2]+" - "+RecuperarNombreDoctor(Integer.parseInt(data[i][2]));

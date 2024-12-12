@@ -3,6 +3,7 @@ package Procesos;
 
 import Constantes.ConstantesTipoCita;
 import Controlador.ControlConectar;
+import DAO.DAO_CONECCION;
 import VistaPrincipal.frmRegistrarTipoCita;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
@@ -17,7 +18,7 @@ public class ProcesosTipoCita implements ConstantesTipoCita{
         frmTipoCita.setVisible(true);
     }
     public static String [][]RecuperarDatosTipoCita(){
-        String [][]data= ControlConectar.recuperarDatos(Consulta, numColum);
+        String [][]data= DAO_CONECCION.recuperarDatos(Consulta, numColum);
         return data;
     }
     public static void mostrarEnTabla(frmRegistrarTipoCita frm, String data[][]){

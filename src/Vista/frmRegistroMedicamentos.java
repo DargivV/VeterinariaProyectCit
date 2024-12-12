@@ -32,7 +32,6 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
         txt_nombre = new javax.swing.JTextField();
         txt_pricipio_Activo = new javax.swing.JTextField();
         jdtc_FechaVencimiento = new com.toedter.calendar.JDateChooser();
-        cbx_funcionTerapeutica = new javax.swing.JComboBox<>();
         cbx_TipoMedicamento = new javax.swing.JComboBox<>();
         btn_buscar = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
@@ -45,6 +44,7 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         txa_descripcion = new javax.swing.JTextArea();
         btn_actualizar = new javax.swing.JButton();
+        txt_funcionTerapeutica = new javax.swing.JTextField();
 
         setMinimumSize(new java.awt.Dimension(1280, 620));
         setPreferredSize(new java.awt.Dimension(1280, 620));
@@ -73,19 +73,12 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
         txt_pricipio_Activo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         txt_pricipio_Activo.setForeground(new java.awt.Color(0, 0, 0));
         txt_pricipio_Activo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "PRINCIPIO ACTIVO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(txt_pricipio_Activo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 180, 50));
+        jPanel1.add(txt_pricipio_Activo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 180, 50));
 
         jdtc_FechaVencimiento.setBackground(new java.awt.Color(255, 255, 255));
         jdtc_FechaVencimiento.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FECHA VENCIMIENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
         jdtc_FechaVencimiento.setForeground(new java.awt.Color(0, 153, 0));
         jPanel1.add(jdtc_FechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 170, 50));
-
-        cbx_funcionTerapeutica.setBackground(new java.awt.Color(255, 255, 255));
-        cbx_funcionTerapeutica.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        cbx_funcionTerapeutica.setForeground(new java.awt.Color(0, 0, 0));
-        cbx_funcionTerapeutica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbx_funcionTerapeutica.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FUNCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
-        jPanel1.add(cbx_funcionTerapeutica, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 170, 50));
 
         cbx_TipoMedicamento.setBackground(new java.awt.Color(255, 255, 255));
         cbx_TipoMedicamento.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -166,6 +159,12 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
         });
         jPanel1.add(btn_actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 140, 110, 50));
 
+        txt_funcionTerapeutica.setBackground(new java.awt.Color(255, 255, 255));
+        txt_funcionTerapeutica.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txt_funcionTerapeutica.setForeground(new java.awt.Color(0, 0, 0));
+        txt_funcionTerapeutica.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "FUNCION", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.add(txt_funcionTerapeutica, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 180, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -191,7 +190,6 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
     public javax.swing.JButton btn_buscar1;
     public javax.swing.JButton btn_guardar;
     public javax.swing.JComboBox<String> cbx_TipoMedicamento;
-    public javax.swing.JComboBox<String> cbx_funcionTerapeutica;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -203,6 +201,7 @@ public class frmRegistroMedicamentos extends javax.swing.JInternalFrame {
     public javax.swing.JTable tbl_RMedicamento;
     public javax.swing.JTextArea txa_descripcion;
     public javax.swing.JTextField txt_codigo;
+    public javax.swing.JTextField txt_funcionTerapeutica;
     public javax.swing.JTextField txt_nombre;
     public javax.swing.JTextField txt_pricipio_Activo;
     // End of variables declaration//GEN-END:variables
